@@ -5,6 +5,11 @@ import GuildedRoseLLC
 
 class GuildedRoseLLCSpec: QuickSpec {
     override func spec() {
+        var app: XCUIApplication!
+        beforeEach {
+            app = XCUIApplication()
+            app.launch()
+        }
         describe("a sample test") {
             context("that passes") {
                 it("true is true") {
@@ -14,11 +19,8 @@ class GuildedRoseLLCSpec: QuickSpec {
         }
         describe("the message") {
             context("for the greeting") {
-                let app = XCUIApplication()
-                app.launch()
-                let labelElement = app.staticTexts["Greeting"]
-                
                 it("is 'Welcome to the Guilded Rose'"){
+                    let labelElement = app.staticTexts["Greeting"]
                     expect(labelElement.exists).to(beTrue())
                     expect(labelElement.label).to(equal("Welcome to the Guilded Rose LLC!"))
                 }
