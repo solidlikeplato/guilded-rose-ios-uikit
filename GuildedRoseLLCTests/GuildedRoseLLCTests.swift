@@ -1,19 +1,19 @@
-//
-//  GuildedRoseLLCTests.swift
-//  GuildedRoseLLCTests
-//
-//  Created by Ethan Whaley on 5/25/21.
-//
-
+import Quick
+import Nimble
+import GuildedRoseLLC
 import XCTest
-@testable import GuildedRoseLLC
 
-class GuildedRoseLLCTests: XCTestCase {
+class GuildedRoseLLCSpec: QuickSpec {
+    override func spec() {
+        describe("greeting view controller") {
+            it("associates a greeting with the storyboard") {
+                let controller = GreetingViewController()
+                let greeting = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+                greeting.text = "Go away! this is not Guilded Rose LLC!"
+                controller.Greeting = greeting
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertTrue(true)
+                expect(controller.Greeting.text).to(equal("Go away! this is not Guilded Rose LLC!"))
+            }
+        }
     }
-
 }
