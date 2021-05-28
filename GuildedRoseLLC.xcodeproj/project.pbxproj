@@ -13,7 +13,7 @@
 		AA8A894C265D778D0005C3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894A265D778D0005C3BC /* Main.storyboard */; };
 		AA8A894E265D778F0005C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894D265D778F0005C3BC /* Assets.xcassets */; };
 		AA8A8951265D778F0005C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
-		AA8A895C265D77900005C3BC /* GuildedRoseLLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* GuildedRoseLLCTests.swift */; };
+		AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */; };
 		AA8A8967265D77900005C3BC /* GuildedRoseLLCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8966265D77900005C3BC /* GuildedRoseLLCUITests.swift */; };
 		AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C68265E940B00FC71E0 /* Quick */; };
 		AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C6E265E943A00FC71E0 /* Nimble */; };
@@ -60,7 +60,7 @@
 		AA8A8950265D778F0005C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8A8952265D778F0005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8957265D77900005C3BC /* GuildedRoseLLCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8A895B265D77900005C3BC /* GuildedRoseLLCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCTests.swift; sourceTree = "<group>"; };
+		AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		AA8A895D265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8962265D77900005C3BC /* GuildedRoseLLCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8966265D77900005C3BC /* GuildedRoseLLCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCUITests.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		AA8A895A265D77900005C3BC /* GuildedRoseLLCTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA8A895B265D77900005C3BC /* GuildedRoseLLCTests.swift */,
+				AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */,
 				AA8A895D265D77900005C3BC /* Info.plist */,
 			);
 			path = GuildedRoseLLCTests;
@@ -317,7 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9F1C74265E97B000FC71E0 /* AppDelegate.swift in Sources */,
-				AA8A895C265D77900005C3BC /* GuildedRoseLLCTests.swift in Sources */,
+				AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */,
 				AA9F1C78265E97B600FC71E0 /* ViewController.swift in Sources */,
 				AA9F1C76265E97B300FC71E0 /* SceneDelegate.swift in Sources */,
 			);
