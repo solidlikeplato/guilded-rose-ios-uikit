@@ -14,7 +14,6 @@
 		AA8A894E265D778F0005C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894D265D778F0005C3BC /* Assets.xcassets */; };
 		AA8A8951265D778F0005C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
 		AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */; };
-		AA8A8967265D77900005C3BC /* GuildedRoseLLCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8966265D77900005C3BC /* GuildedRoseLLCUITests.swift */; };
 		AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C68265E940B00FC71E0 /* Quick */; };
 		AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C6E265E943A00FC71E0 /* Nimble */; };
 		AA9F1C71265E944300FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C70265E944300FC71E0 /* Quick */; };
@@ -31,6 +30,8 @@
 		AA9F1C7D265E97C000FC71E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894D265D778F0005C3BC /* Assets.xcassets */; };
 		AA9F1C7E265E97C300FC71E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
 		AA9F1C7F265E97C300FC71E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
+		AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */; };
+		AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,13 @@
 			remoteGlobalIDString = AA8A8940265D778D0005C3BC;
 			remoteInfo = GuildedRoseLLC;
 		};
+		AA9F1CCA2661861D00FC71E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA8A8939265D778D0005C3BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA8A8940265D778D0005C3BC;
+			remoteInfo = GuildedRoseLLC;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -59,12 +67,15 @@
 		AA8A894D265D778F0005C3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA8A8950265D778F0005C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8A8952265D778F0005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA8A8957265D77900005C3BC /* GuildedRoseLLCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		AA8A895D265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA8A8962265D77900005C3BC /* GuildedRoseLLCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8A8966265D77900005C3BC /* GuildedRoseLLCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCUITests.swift; sourceTree = "<group>"; };
+		AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUISpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8968265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelsSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsSpec.swift; sourceTree = "<group>"; };
+		AA9F1CC92661861D00FC71E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCUISpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +104,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA9F1CC22661861D00FC71E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -100,8 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				AA8A8943265D778D0005C3BC /* GuildedRoseLLC */,
-				AA8A895A265D77900005C3BC /* GuildedRoseLLCTests */,
-				AA8A8965265D77900005C3BC /* GuildedRoseLLCUITests */,
+				AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */,
+				AA8A8965265D77900005C3BC /* GuildedRoseLLCUISpec */,
+				AA9F1CC62661861D00FC71E0 /* ModelsSpec */,
 				AA8A8942265D778D0005C3BC /* Products */,
 				AA9F1C6D265E943A00FC71E0 /* Frameworks */,
 			);
@@ -111,8 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				AA8A8941265D778D0005C3BC /* GuildedRoseLLC.app */,
-				AA8A8957265D77900005C3BC /* GuildedRoseLLCTests.xctest */,
-				AA8A8962265D77900005C3BC /* GuildedRoseLLCUITests.xctest */,
+				AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */,
+				AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */,
+				AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +140,7 @@
 		AA8A8943265D778D0005C3BC /* GuildedRoseLLC */ = {
 			isa = PBXGroup;
 			children = (
+				AA9F1CC0266185BB00FC71E0 /* Models */,
 				AA8A8944265D778D0005C3BC /* AppDelegate.swift */,
 				AA8A8946265D778D0005C3BC /* SceneDelegate.swift */,
 				AA8A8948265D778D0005C3BC /* ViewController.swift */,
@@ -131,22 +152,22 @@
 			path = GuildedRoseLLC;
 			sourceTree = "<group>";
 		};
-		AA8A895A265D77900005C3BC /* GuildedRoseLLCTests */ = {
+		AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */ = {
 			isa = PBXGroup;
 			children = (
 				AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */,
 				AA8A895D265D77900005C3BC /* Info.plist */,
 			);
-			path = GuildedRoseLLCTests;
+			path = GuildedRoseLLCSpec;
 			sourceTree = "<group>";
 		};
-		AA8A8965265D77900005C3BC /* GuildedRoseLLCUITests */ = {
+		AA8A8965265D77900005C3BC /* GuildedRoseLLCUISpec */ = {
 			isa = PBXGroup;
 			children = (
-				AA8A8966265D77900005C3BC /* GuildedRoseLLCUITests.swift */,
+				AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */,
 				AA8A8968265D77900005C3BC /* Info.plist */,
 			);
-			path = GuildedRoseLLCUITests;
+			path = GuildedRoseLLCUISpec;
 			sourceTree = "<group>";
 		};
 		AA9F1C6D265E943A00FC71E0 /* Frameworks */ = {
@@ -154,6 +175,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA9F1CC0266185BB00FC71E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA9F1CC62661861D00FC71E0 /* ModelsSpec */ = {
+			isa = PBXGroup;
+			children = (
+				AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */,
+				AA9F1CC92661861D00FC71E0 /* Info.plist */,
+			);
+			path = ModelsSpec;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,9 +215,9 @@
 			productReference = AA8A8941265D778D0005C3BC /* GuildedRoseLLC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AA8A8956265D77900005C3BC /* GuildedRoseLLCTests */ = {
+		AA8A8956265D77900005C3BC /* GuildedRoseLLCSpec */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA8A896E265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCTests" */;
+			buildConfigurationList = AA8A896E265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCSpec" */;
 			buildPhases = (
 				AA8A8953265D77900005C3BC /* Sources */,
 				AA8A8954265D77900005C3BC /* Frameworks */,
@@ -191,18 +228,18 @@
 			dependencies = (
 				AA8A8959265D77900005C3BC /* PBXTargetDependency */,
 			);
-			name = GuildedRoseLLCTests;
+			name = GuildedRoseLLCSpec;
 			packageProductDependencies = (
 				AA9F1C68265E940B00FC71E0 /* Quick */,
 				AA9F1C6E265E943A00FC71E0 /* Nimble */,
 			);
-			productName = GuildedRoseLLCTests;
-			productReference = AA8A8957265D77900005C3BC /* GuildedRoseLLCTests.xctest */;
+			productName = GuildedRoseLLCSpec;
+			productReference = AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AA8A8961265D77900005C3BC /* GuildedRoseLLCUITests */ = {
+		AA8A8961265D77900005C3BC /* GuildedRoseLLCUISpec */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUITests" */;
+			buildConfigurationList = AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUISpec" */;
 			buildPhases = (
 				AA8A895E265D77900005C3BC /* Sources */,
 				AA8A895F265D77900005C3BC /* Frameworks */,
@@ -213,14 +250,32 @@
 			dependencies = (
 				AA8A8964265D77900005C3BC /* PBXTargetDependency */,
 			);
-			name = GuildedRoseLLCUITests;
+			name = GuildedRoseLLCUISpec;
 			packageProductDependencies = (
 				AA9F1C70265E944300FC71E0 /* Quick */,
 				AA9F1C72265E944700FC71E0 /* Nimble */,
 			);
-			productName = GuildedRoseLLCUITests;
-			productReference = AA8A8962265D77900005C3BC /* GuildedRoseLLCUITests.xctest */;
+			productName = GuildedRoseLLCUISpec;
+			productReference = AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AA9F1CC42661861D00FC71E0 /* ModelsSpec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA9F1CCC2661861D00FC71E0 /* Build configuration list for PBXNativeTarget "ModelsSpec" */;
+			buildPhases = (
+				AA9F1CC12661861D00FC71E0 /* Sources */,
+				AA9F1CC22661861D00FC71E0 /* Frameworks */,
+				AA9F1CC32661861D00FC71E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA9F1CCB2661861D00FC71E0 /* PBXTargetDependency */,
+			);
+			name = ModelsSpec;
+			productName = ModelsSpec;
+			productReference = AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -239,6 +294,10 @@
 						TestTargetID = AA8A8940265D778D0005C3BC;
 					};
 					AA8A8961265D77900005C3BC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = AA8A8940265D778D0005C3BC;
+					};
+					AA9F1CC42661861D00FC71E0 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = AA8A8940265D778D0005C3BC;
 					};
@@ -262,8 +321,9 @@
 			projectRoot = "";
 			targets = (
 				AA8A8940265D778D0005C3BC /* GuildedRoseLLC */,
-				AA8A8956265D77900005C3BC /* GuildedRoseLLCTests */,
-				AA8A8961265D77900005C3BC /* GuildedRoseLLCUITests */,
+				AA8A8956265D77900005C3BC /* GuildedRoseLLCSpec */,
+				AA8A8961265D77900005C3BC /* GuildedRoseLLCUISpec */,
+				AA9F1CC42661861D00FC71E0 /* ModelsSpec */,
 			);
 		};
 /* End PBXProject section */
@@ -299,6 +359,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA9F1CC32661861D00FC71E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,10 +394,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */,
 				AA9F1C75265E97B100FC71E0 /* AppDelegate.swift in Sources */,
-				AA8A8967265D77900005C3BC /* GuildedRoseLLCUITests.swift in Sources */,
 				AA9F1C79265E97B700FC71E0 /* ViewController.swift in Sources */,
 				AA9F1C77265E97B400FC71E0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9F1CC12661861D00FC71E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +421,11 @@
 			isa = PBXTargetDependency;
 			target = AA8A8940265D778D0005C3BC /* GuildedRoseLLC */;
 			targetProxy = AA8A8963265D77900005C3BC /* PBXContainerItemProxy */;
+		};
+		AA9F1CCB2661861D00FC71E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA8A8940265D778D0005C3BC /* GuildedRoseLLC */;
+			targetProxy = AA9F1CCA2661861D00FC71E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,14 +607,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCTests/Info.plist;
+				INFOPLIST_FILE = GuildedRoseLLCSpec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCSpec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,14 +628,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCTests/Info.plist;
+				INFOPLIST_FILE = GuildedRoseLLCSpec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCSpec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,13 +648,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCUITests/Info.plist;
+				INFOPLIST_FILE = GuildedRoseLLCUISpec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUISpec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,17 +667,55 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCUITests/Info.plist;
+				INFOPLIST_FILE = GuildedRoseLLCUISpec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUISpec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GuildedRoseLLC;
+			};
+			name = Release;
+		};
+		AA9F1CCD2661861D00FC71E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModelsSpec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.ModelsSpec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuildedRoseLLC.app/GuildedRoseLLC";
+			};
+			name = Debug;
+		};
+		AA9F1CCE2661861D00FC71E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ModelsSpec/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.ModelsSpec;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuildedRoseLLC.app/GuildedRoseLLC";
 			};
 			name = Release;
 		};
@@ -622,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA8A896E265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCTests" */ = {
+		AA8A896E265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCSpec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA8A896F265D77900005C3BC /* Debug */,
@@ -631,11 +749,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUITests" */ = {
+		AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUISpec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA8A8972265D77900005C3BC /* Debug */,
 				AA8A8973265D77900005C3BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA9F1CCC2661861D00FC71E0 /* Build configuration list for PBXNativeTarget "ModelsSpec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA9F1CCD2661861D00FC71E0 /* Debug */,
+				AA9F1CCE2661861D00FC71E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
