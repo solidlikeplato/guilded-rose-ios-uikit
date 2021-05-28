@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA8A8956265D77900005C3BC"
-               BuildableName = "GuildedRoseLLCTests.xctest"
-               BlueprintName = "GuildedRoseLLCTests"
+               BuildableName = "GuildedRoseLLCSpec.xctest"
+               BlueprintName = "GuildedRoseLLCSpec"
                ReferencedContainer = "container:GuildedRoseLLC.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA8A8961265D77900005C3BC"
-               BuildableName = "GuildedRoseLLCUITests.xctest"
-               BlueprintName = "GuildedRoseLLCUITests"
+               BuildableName = "GuildedRoseLLCUISpec.xctest"
+               BlueprintName = "GuildedRoseLLCUISpec"
+               ReferencedContainer = "container:GuildedRoseLLC.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AA9F1CC42661861D00FC71E0"
+               BuildableName = "ModelsSpec.xctest"
+               BlueprintName = "ModelsSpec"
                ReferencedContainer = "container:GuildedRoseLLC.xcodeproj">
             </BuildableReference>
          </TestableReference>
