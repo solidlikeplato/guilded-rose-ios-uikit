@@ -32,6 +32,17 @@
 		AA9F1C7F265E97C300FC71E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
 		AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */; };
 		AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */; };
+		AAD1ADEB26618F0B0035EB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8944265D778D0005C3BC /* AppDelegate.swift */; };
+		AAD1ADEC26618F0E0035EB67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8946265D778D0005C3BC /* SceneDelegate.swift */; };
+		AAD1ADED26618F100035EB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8948265D778D0005C3BC /* ViewController.swift */; };
+		AAD1ADEE26618F170035EB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894A265D778D0005C3BC /* Main.storyboard */; };
+		AAD1ADEF26618F1A0035EB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
+		AAD1ADF526618F350035EB67 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AAD1ADF426618F350035EB67 /* Quick */; };
+		AAD1ADF726618F390035EB67 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AAD1ADF626618F390035EB67 /* Nimble */; };
+		AAD1ADF926618FB70035EB67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADF826618FB70035EB67 /* Item.swift */; };
+		AAD1ADFA26618FF30035EB67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADF826618FB70035EB67 /* Item.swift */; };
+		AAD1ADFB26618FF30035EB67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADF826618FB70035EB67 /* Item.swift */; };
+		AAD1ADFC26618FF40035EB67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADF826618FB70035EB67 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +87,7 @@
 		AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsSpec.swift; sourceTree = "<group>"; };
 		AA9F1CC92661861D00FC71E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCUISpec.swift; sourceTree = "<group>"; };
+		AAD1ADF826618FB70035EB67 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADF526618F350035EB67 /* Quick in Frameworks */,
+				AAD1ADF726618F390035EB67 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +194,7 @@
 		AA9F1CC0266185BB00FC71E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AAD1ADF826618FB70035EB67 /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +288,10 @@
 				AA9F1CCB2661861D00FC71E0 /* PBXTargetDependency */,
 			);
 			name = ModelsSpec;
+			packageProductDependencies = (
+				AAD1ADF426618F350035EB67 /* Quick */,
+				AAD1ADF626618F390035EB67 /* Nimble */,
+			);
 			productName = ModelsSpec;
 			productReference = AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -363,6 +382,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADEE26618F170035EB67 /* Main.storyboard in Resources */,
+				AAD1ADEF26618F1A0035EB67 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADF926618FB70035EB67 /* Item.swift in Sources */,
 				AA8A8949265D778D0005C3BC /* ViewController.swift in Sources */,
 				AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */,
 				AA8A8947265D778D0005C3BC /* SceneDelegate.swift in Sources */,
@@ -383,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADFA26618FF30035EB67 /* Item.swift in Sources */,
 				AA9F1C74265E97B000FC71E0 /* AppDelegate.swift in Sources */,
 				AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */,
 				AA9F1C78265E97B600FC71E0 /* ViewController.swift in Sources */,
@@ -394,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADFB26618FF30035EB67 /* Item.swift in Sources */,
 				AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */,
 				AA9F1C75265E97B100FC71E0 /* AppDelegate.swift in Sources */,
 				AA9F1C79265E97B700FC71E0 /* ViewController.swift in Sources */,
@@ -405,7 +429,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD1ADFC26618FF40035EB67 /* Item.swift in Sources */,
+				AAD1ADEB26618F0B0035EB67 /* AppDelegate.swift in Sources */,
 				AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */,
+				AAD1ADED26618F100035EB67 /* ViewController.swift in Sources */,
+				AAD1ADEC26618F0E0035EB67 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +833,16 @@
 			productName = Quick;
 		};
 		AA9F1C72265E944700FC71E0 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9F1C6A265E941F00FC71E0 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		AAD1ADF426618F350035EB67 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9F1C67265E940B00FC71E0 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		AAD1ADF626618F390035EB67 /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA9F1C6A265E941F00FC71E0 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
