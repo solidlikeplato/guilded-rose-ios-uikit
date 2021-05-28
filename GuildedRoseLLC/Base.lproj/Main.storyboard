@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sa-E6E">
-                                <rect key="frame" x="75" y="216" width="263.5" height="41"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sa-E6E">
+                                <rect key="frame" x="75" y="94" width="263.5" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Guilded Rose LLC!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-JN-H6b">
                                         <rect key="frame" x="0.0" y="0.0" width="263.5" height="20.5"/>
@@ -27,8 +27,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items in stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Vs-BOE">
-                                        <rect key="frame" x="0.0" y="20.5" width="263.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="263.5" height="20.5"/>
                                         <accessibility key="accessibilityConfiguration" identifier="StockAvailabilityHeading"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold out, please check back later." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erc-ph-Iex">
+                                        <rect key="frame" x="0.0" y="57" width="263.5" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="SoldOutMessage"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,6 +45,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PSS-sa-E6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WPk-RC-PW6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Greeting" destination="nmN-JN-H6b" id="DB1-be-yUE"/>
