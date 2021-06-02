@@ -13,7 +13,10 @@ public class GreetingViewController: UIViewController {
         greeting.accessibilityIdentifier = "Greeting"
         greeting.text = "Welcome to the Guilded Rose LLC!"
         itemsList = UILabel()
-        itemsList.text = items[0].name
+        
+        let itemsText = items.map {$0.name}.joined(separator: ", ")
+
+        itemsList.text = itemsText
     }
 
 }
