@@ -10,6 +10,15 @@ class ItemSpec: QuickSpec {
                 expect(brie.name).to(equal("Brie"))
             }
         }
+        describe("fetch items") {
+            it("returns a list of items") {
+                expect(Item.getItems()).to(equal([Item(name: "Foo"), Item(name:"Bar"), Item(name:"FooBar")]))
+                
+            }
+        }
     }
 }
 
+
+
+//let itemsList = [Item(name: "Foo"), Item(name:"Bar"), Item(name:"FooBar")]
