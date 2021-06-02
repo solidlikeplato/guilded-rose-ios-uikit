@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="Greeting" destination="nmN-JN-H6b" id="DB1-be-yUE"/>
+                        <outlet property="itemsList" destination="erc-ph-Iex" id="djn-YW-jh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
