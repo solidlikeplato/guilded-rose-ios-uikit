@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05D62CC7266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */; };
+		05D62CC8266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */; };
+		05D62CC9266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */; };
+		05D62CCA266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */; };
+		05D62CCC266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */; };
+		05D62CCD266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */; };
+		05D62CCE266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */; };
+		05D62CCF266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */; };
 		AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8944265D778D0005C3BC /* AppDelegate.swift */; };
 		AA8A8947265D778D0005C3BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8946265D778D0005C3BC /* SceneDelegate.swift */; };
 		AA8A8949265D778D0005C3BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8948265D778D0005C3BC /* ViewController.swift */; };
@@ -70,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		AA8A8941265D778D0005C3BC /* GuildedRoseLLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuildedRoseLLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8944265D778D0005C3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA8A8946265D778D0005C3BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +172,8 @@
 				AA8A894D265D778F0005C3BC /* Assets.xcassets */,
 				AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */,
 				AA8A8952265D778F0005C3BC /* Info.plist */,
+				05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */,
+				05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */,
 			);
 			path = GuildedRoseLLC;
 			sourceTree = "<group>";
@@ -394,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05D62CCC266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */,
+				05D62CC7266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
 				AAD1ADF926618FB70035EB67 /* Item.swift in Sources */,
 				AA8A8949265D778D0005C3BC /* ViewController.swift in Sources */,
 				AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */,
@@ -406,8 +420,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD1ADFA26618FF30035EB67 /* Item.swift in Sources */,
+				05D62CCD266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */,
 				AA9F1C74265E97B000FC71E0 /* AppDelegate.swift in Sources */,
 				AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */,
+				05D62CC8266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
 				AA9F1C78265E97B600FC71E0 /* ViewController.swift in Sources */,
 				AA9F1C76265E97B300FC71E0 /* SceneDelegate.swift in Sources */,
 			);
@@ -418,8 +434,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD1ADFB26618FF30035EB67 /* Item.swift in Sources */,
+				05D62CCE266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */,
 				AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */,
 				AA9F1C75265E97B100FC71E0 /* AppDelegate.swift in Sources */,
+				05D62CC9266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
 				AA9F1C79265E97B700FC71E0 /* ViewController.swift in Sources */,
 				AA9F1C77265E97B400FC71E0 /* SceneDelegate.swift in Sources */,
 			);
@@ -430,8 +448,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD1ADFC26618FF40035EB67 /* Item.swift in Sources */,
+				05D62CCF266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */,
 				AAD1ADEB26618F0B0035EB67 /* AppDelegate.swift in Sources */,
 				AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */,
+				05D62CCA266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
 				AAD1ADED26618F100035EB67 /* ViewController.swift in Sources */,
 				AAD1ADEC26618F0E0035EB67 /* SceneDelegate.swift in Sources */,
 			);

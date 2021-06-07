@@ -12,7 +12,7 @@ class ItemSpec: QuickSpec {
         }
         describe("fetch items") {
             it("returns a list of items") {
-                expect(Item.getItems()).to(equal([Item(name: "Foo"), Item(name:"Bar"), Item(name:"FooBar")]))
+                expect(Item.getItems()).to(equal(Item.testData))
                 
             }
         }
