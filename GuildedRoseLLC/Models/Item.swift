@@ -27,4 +27,5 @@ extension Item {
         Item(name: "Ipsum"),
         Item(name: "VeniVidiVici"),
     ]
+    static var noItemsInStock = Item(name: "Sold out, please check back later")
 }
