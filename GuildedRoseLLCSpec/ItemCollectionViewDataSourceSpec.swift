@@ -17,11 +17,11 @@ class ItemCollectionViewDataSourceSpec: QuickSpec {
         }
         
         describe("the number of items") {
-            it("has a single item, the not in stock message") {
+            it("has no items") {
                 let dataSource = ItemCollectionViewDataSource(items: [])
                 let collectionView = buildCollectionView()
                 let numberOfItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
-                expect(numberOfItems).to(equal(1))
+                expect(numberOfItems).to(equal(0))
             }
             it("has one item") {
                 let dataSource = ItemCollectionViewDataSource(items: [Item(name: "Foo")])

@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  GuildedRoseLLC
-//
-//  Created by Ethan Whaley on 5/25/21.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
