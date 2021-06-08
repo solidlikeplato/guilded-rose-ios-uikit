@@ -7,7 +7,12 @@ public struct Item {
     public let name: String
     
     public static func getItems() -> [Item] {
-        return testData
+        if CommandLine.arguments
+            .contains("NO_ITEMS_IN_STOCK") {
+            return []
+        } else {
+            return testData
+        }
     }
     
 }

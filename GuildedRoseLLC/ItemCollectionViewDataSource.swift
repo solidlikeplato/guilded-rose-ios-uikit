@@ -7,16 +7,14 @@ class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     }
     
     init(items: [Item]) {
-        if items.count == 0 {
-            self.items = [Item.noItemsInStock]
-        } else {
-            self.items = items
-        }
+        self.items = items
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if items.count == 0 {
+            self.items = [Item.noItemsInStock]
+        }
         return items.count
-        // if no items make 1 cell
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
