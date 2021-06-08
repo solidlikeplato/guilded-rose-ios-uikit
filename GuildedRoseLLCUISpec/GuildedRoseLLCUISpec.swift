@@ -6,14 +6,13 @@ import GuildedRoseLLC
 class GuildedRoseLLCSpec: QuickSpec {
     override func spec() {
         var app: XCUIApplication!
-        beforeEach {
-            app = XCUIApplication()
-            app.launch()
-        }
         
         describe("greeting message") {
             it("displays the welcome greeting"){
+                app = XCUIApplication()
+                app.launch()
                 let labelElement = app.staticTexts["Greeting"]
+                
                 expect(labelElement.exists).to(beTrue())
                 expect(labelElement.label).to(equal("Welcome to the Guilded Rose LLC!"))
             }
@@ -21,7 +20,10 @@ class GuildedRoseLLCSpec: QuickSpec {
         
         describe("Items in stock heading") {
             it("displays 'Items in stock' text") {
+                app = XCUIApplication()
+                app.launch()
                 let labelElement = app.staticTexts["StockAvailabilityHeading"]
+                
                 expect(labelElement.exists).to(beTrue())
                 expect(labelElement.label).to(equal("Items in stock:"))
             }
@@ -30,6 +32,19 @@ class GuildedRoseLLCSpec: QuickSpec {
         describe("Items message") {
             context("When there are no items in stock") {
                 it("displays sold out message") {
+                    app = XCUIApplication()
+                    app.launchArguments.append("NO_ITEMS_IN_STOCK")
+                    app.launch()
+                    
+//                    print (app.debugDescription)
+                    let view = app.collectionViews["itemCollectionView"]
+                    
+                    let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
+                    
+                    expect(cells.count).to(equal(1))
+                    expect(cells[0].label).to(equal("Sold out, please check back later"))
+                    
+                    
 //                    let labelElement = app.staticTexts["SoldOutMessage"]
 //                    expect(labelElement.exists).to(beTrue())
 //                    expect(labelElement.label).to(equal("Sold out, please check back later."))

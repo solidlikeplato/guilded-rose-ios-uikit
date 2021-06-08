@@ -22,7 +22,6 @@ class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
-        // if no items make one cell with label of "
         cell.itemCellLabel.text = items[indexPath.row].name
 
         return cell

@@ -13,6 +13,8 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
         greeting = UILabel()
         greeting.accessibilityIdentifier = "Greeting"
         greeting.text = "Welcome to the Guilded Rose LLC!"
+        
+        itemCollectionView.accessibilityIdentifier = "itemCollectionView"
     }
 
 }
