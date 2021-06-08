@@ -9,6 +9,7 @@ public struct Item {
     public static func getItems() -> [Item] {
         return testData
     }
+    
 }
 
 extension Item:Equatable{
