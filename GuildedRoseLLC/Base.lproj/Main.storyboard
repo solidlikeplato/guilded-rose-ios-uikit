@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sa-E6E">
-                                <rect key="frame" x="75" y="94" width="264" height="77.5"/>
+                                <rect key="frame" x="75" y="94" width="264" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Guilded Rose LLC!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-JN-H6b">
                                         <rect key="frame" x="0.0" y="0.0" width="264" height="20.5"/>
@@ -34,17 +34,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold out, please check back later." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erc-ph-Iex">
-                                        <rect key="frame" x="0.0" y="57" width="264" height="20.5"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="SoldOutMessage"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-Sc-AaE">
-                                <rect key="frame" x="20" y="180" width="374" height="682"/>
+                                <rect key="frame" x="20" y="151.5" width="374" height="710.5"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EIA-g4-jzH">
                                     <size key="itemSize" width="128" height="128"/>
@@ -97,7 +90,6 @@
                     <connections>
                         <outlet property="greeting" destination="nmN-JN-H6b" id="cpL-zQ-T5I"/>
                         <outlet property="itemCollectionView" destination="Fzc-Sc-AaE" id="wOh-Op-yH8"/>
-                        <outlet property="itemsList" destination="erc-ph-Iex" id="djn-YW-jh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
