@@ -31,29 +31,35 @@ class GuildedRoseLLCSpec: QuickSpec {
         
         describe("Items view") {
             context("When there are no items in stock") {
-                it("displays sold out message") {
+                it("hides the itemsCollectionview and shows the no items message") {
+                    
                     app = XCUIApplication()
                     launchWithCommandArgument(argument: "NO_ITEMS_IN_STOCK", app: app)
 
                     let view = app.collectionViews["itemCollectionView"]
-                    let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
+                    let noItemsMessage = app.staticTexts["noItemsMessage"]
                     
-                    expect(cells.count).to(equal(1))
-                    expect(cells[0].label).to(equal("Sold out, please check back later"))
-                
+                    expect(view.isHittable).to(equal(false))
+                    expect(noItemsMessage.isHittable).to(equal(true))
+
                 }
             }
             
             context("With one item"){
-                it("displays the single item") {
+                it("displays the single item and doesn't display no items message") {
                     app = XCUIApplication()
                     launchWithCommandArgument(argument: "SINGLE_TEST_ITEM", app: app)
 
                     let view = app.collectionViews["itemCollectionView"]
                     let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
+                    let noItemsMessage = app.staticTexts["noItemsMessage"]
                     
+                    expect(view.isHittable).to(equal(true))
+                    expect(noItemsMessage.isHittable).to(equal(false))
                     expect(cells.count).to(equal(1))
-                    expect(cells[0].label).to(equal("Foo"))
+                    
+
+                    
                 }
             }
             
@@ -66,9 +72,6 @@ class GuildedRoseLLCSpec: QuickSpec {
                     let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
                     
                     expect(cells.count).to(equal(3))
-                    expect(cells[0].label).to(equal("Foo"))
-                    expect(cells[1].label).to(equal("Foo"))
-                    expect(cells[2].label).to(equal("Foo"))
                 }
             }
         }

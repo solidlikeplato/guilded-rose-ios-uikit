@@ -11,6 +11,9 @@ class ViewControllerSpec: QuickSpec {
                 controller = GuildedRoseLLC.GreetingViewController()
                 let itemCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: UICollectionViewLayout())
                 controller.itemCollectionView = itemCollectionView
+                controller.greeting = UILabel()
+                controller.noItemsLabel = UILabel()
+                
             }
             describe("loading the view") {
                 it("sets a data source") {
