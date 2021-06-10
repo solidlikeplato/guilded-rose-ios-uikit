@@ -1,6 +1,4 @@
-import Foundation
-
-public struct Item {
+struct Item {
     public init(name: String) {
         self.name = name
     }
