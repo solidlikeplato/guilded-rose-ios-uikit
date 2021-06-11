@@ -5,9 +5,9 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
     @IBOutlet public var greeting: UILabel!
     @IBOutlet public var itemCollectionView: UICollectionView!
     @IBOutlet public var noItemsLabel: UILabel!
+    
     var datasource: ItemCollectionViewDataSource?
     func toggleListDisplay(data: [Item]) {
-
         if data.isEmpty {
             itemCollectionView.isHidden = true
             noItemsLabel.isHidden = false
@@ -16,6 +16,7 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
             noItemsLabel.isHidden = true
         }
     }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         let data = Item.getItems()
@@ -25,8 +26,6 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
         toggleListDisplay(data: data)
         
         greeting.accessibilityIdentifier = "Greeting"
-        
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"
     }
-
 }

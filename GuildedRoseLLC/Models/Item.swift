@@ -1,7 +1,9 @@
 struct Item {
+    
     public init(name: String) {
         self.name = name
     }
+    
     public let name: String
     
     public static func getItems() -> [Item] {
@@ -20,7 +22,6 @@ struct Item {
             return testData
         }
     }
-    
 }
 
 extension Item:Equatable{
@@ -38,6 +39,5 @@ extension Item {
         Item(name: "Ipsum"),
         Item(name: "VeniVidiVici"),
     ]
-//    static var noItemsInStock = Item(name: "Sold out, please check back later")
     static var singleTestItem = Item(name: "Foo")
 }

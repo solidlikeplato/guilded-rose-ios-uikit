@@ -1,6 +1,7 @@
 import UIKit
 
 class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+    
     var items: [Item]
     
     init(items: [Item]) {
@@ -18,5 +19,4 @@ class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
         return cell
     }
-
 }
