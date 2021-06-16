@@ -5,7 +5,7 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
     @IBOutlet public var greeting: UILabel!
     @IBOutlet public var itemCollectionView: UICollectionView!
     @IBOutlet public var noItemsLabel: UILabel!
-    
+    var data: [Item] = []
     var datasource: ItemCollectionViewDataSource?
     func toggleListDisplay(data: [Item]) {
         if data.isEmpty {
@@ -19,11 +19,16 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        let data = Item.getItems()
-        datasource = ItemCollectionViewDataSource(items: data)
-        itemCollectionView.dataSource = datasource
-        itemCollectionView.delegate = self
+
+        ItemRepository().getItems() { (items: [Item]) in
+            self.datasource = ItemCollectionViewDataSource(items: items)
+            self.data = items
+            print("Closure")
+        }
+        print("viewDidLoad")
         toggleListDisplay(data: data)
+        itemCollectionView.delegate = self
+        itemCollectionView.dataSource = datasource
         
         greeting.accessibilityIdentifier = "Greeting"
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"

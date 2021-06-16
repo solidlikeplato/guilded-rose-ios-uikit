@@ -13,9 +13,15 @@ struct Item {
     public let name: String
     
     public static func getItems() -> [Item] {
-
+        var itemList: [Item] = []
         guard CommandLine.arguments.count > 1 else {
-            return ItemRepository().getItems()
+            ItemRepository().getItems {(items: [Item]) in
+                for item in items {
+                    print(item.name)
+                }
+                
+            }
+            return itemList
         }
         switch CommandLine.arguments[1] {
         case "NO_ITEMS_IN_STOCK":
@@ -51,24 +57,9 @@ extension Item {
 
 
 class ItemRepository {
-    init() {}
-    
-    
-    
-//    func fetchFilms(completionHandler: @escaping ([Film]) -> Void) {
-//      // Setup the variable lotsOfFilms
-//      var lotsOfFilms: [Film]
-//
-//      // Call the API with some code
-//
-//      // Using data from the API, assign a value to lotsOfFilms
-//
-//      // Give the completion handler the variable, lotsOfFilms
-//      completionHandler(lotsOfFilms)
-//    }
 
-    public func getItems(completionHandler: @escaping ([Item]) -> Void) -> [Item] {
-        var itemList: [Item]
+    public func getItems(onSuccess: @escaping (_ : [Item]) -> Void) {
+        var itemList: [Item] = []
         
         let url = URL(string: "https://floating-spire-59497.herokuapp.com/api/v1//items")
         guard let requestUrl = url else { fatalError() }
@@ -79,8 +70,7 @@ class ItemRepository {
             
             if let error = error {
                 return
-            }
-            
+            } else
             if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
                 
@@ -90,12 +80,10 @@ class ItemRepository {
                         Item(json: $0)
                     }
                     print("ITEMLISTINSIDE", itemList)
+                    onSuccess(itemList)
                 }
             }
         }
-        completionHandler(itemList)
         task.resume()
-        print("ITEMLISTOUTSIDE", itemList)
-        return itemList
     }
 }
