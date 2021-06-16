@@ -23,6 +23,10 @@
 		AA8A894E265D778F0005C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894D265D778F0005C3BC /* Assets.xcassets */; };
 		AA8A8951265D778F0005C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
 		AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */; };
+		AA8F3A87267AA5CD007D7AD2 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */; };
+		AA8F3A88267AA5CD007D7AD2 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */; };
+		AA8F3A89267AA5CD007D7AD2 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */; };
+		AA8F3A8A267AA5CD007D7AD2 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */; };
 		AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C68265E940B00FC71E0 /* Quick */; };
 		AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C6E265E943A00FC71E0 /* Nimble */; };
 		AA9F1C71265E944300FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C70265E944300FC71E0 /* Quick */; };
@@ -95,6 +99,7 @@
 		AA8A895D265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUISpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8968265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 		AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelsSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsSpec.swift; sourceTree = "<group>"; };
 		AA9F1CC92661861D00FC71E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 		AA8A8943265D778D0005C3BC /* GuildedRoseLLC */ = {
 			isa = PBXGroup;
 			children = (
+				AA8F3A85267AA5B3007D7AD2 /* Repository */,
 				AA9F1CC0266185BB00FC71E0 /* Models */,
 				AA8A8944265D778D0005C3BC /* AppDelegate.swift */,
 				AA8A8946265D778D0005C3BC /* SceneDelegate.swift */,
@@ -197,6 +203,14 @@
 				AA8A8968265D77900005C3BC /* Info.plist */,
 			);
 			path = GuildedRoseLLCUISpec;
+			sourceTree = "<group>";
+		};
+		AA8F3A85267AA5B3007D7AD2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F3A86267AA5CD007D7AD2 /* ItemRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		AA9F1C6D265E943A00FC71E0 /* Frameworks */ = {
@@ -411,6 +425,7 @@
 			files = (
 				05D62CCC266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */,
 				05D62CC7266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
+				AA8F3A87267AA5CD007D7AD2 /* ItemRepository.swift in Sources */,
 				AAD1ADF926618FB70035EB67 /* Item.swift in Sources */,
 				AA8A8949265D778D0005C3BC /* ViewController.swift in Sources */,
 				AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */,
@@ -429,6 +444,7 @@
 				AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */,
 				AA9F1C78265E97B600FC71E0 /* ViewController.swift in Sources */,
 				AA8A10D92672655E00DEE278 /* ItemCollectionViewDataSource.swift in Sources */,
+				AA8F3A88267AA5CD007D7AD2 /* ItemRepository.swift in Sources */,
 				AA9F1C76265E97B300FC71E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +458,7 @@
 				AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */,
 				AA9F1C75265E97B100FC71E0 /* AppDelegate.swift in Sources */,
 				05D62CC9266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
+				AA8F3A89267AA5CD007D7AD2 /* ItemRepository.swift in Sources */,
 				AA9F1C79265E97B700FC71E0 /* ViewController.swift in Sources */,
 				AA9F1C77265E97B400FC71E0 /* SceneDelegate.swift in Sources */,
 			);
@@ -456,6 +473,7 @@
 				AAD1ADEB26618F0B0035EB67 /* AppDelegate.swift in Sources */,
 				AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */,
 				05D62CCA266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */,
+				AA8F3A8A267AA5CD007D7AD2 /* ItemRepository.swift in Sources */,
 				AAD1ADED26618F100035EB67 /* ViewController.swift in Sources */,
 				AAD1ADEC26618F0E0035EB67 /* SceneDelegate.swift in Sources */,
 			);
