@@ -16,6 +16,12 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
             noItemsLabel.isHidden = true
         }
     }
+    func setData() {
+        print("setData")
+        self.datasource = ItemCollectionViewDataSource(items: self.data)
+        self.toggleListDisplay(data: self.data)
+        self.itemCollectionView.dataSource = self.datasource
+    }
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +29,16 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
         ItemRepository().getItems() { (items: [Item]) in
             self.datasource = ItemCollectionViewDataSource(items: items)
             self.data = items
-            print("Closure")
+            print("fetchData")
+        }
+    
+        let seconds = 5.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.setData()
         }
         print("viewDidLoad")
-        toggleListDisplay(data: data)
-        itemCollectionView.delegate = self
-        itemCollectionView.dataSource = datasource
+
+        self.itemCollectionView.delegate = self
         
         greeting.accessibilityIdentifier = "Greeting"
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"
