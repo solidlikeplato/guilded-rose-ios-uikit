@@ -1,7 +1,13 @@
+import UIKit
+
 struct Item {
     
     public init(name: String) {
         self.name = name
+    }
+    
+    public init(json: [String: Any]) {
+        self.name = json["name"] as? String ?? "No Name"
     }
     
     public let name: String
@@ -9,7 +15,7 @@ struct Item {
     public static func getItems() -> [Item] {
 
         guard CommandLine.arguments.count > 1 else {
-            return testData
+            return ItemRepository().getItems()
         }
         switch CommandLine.arguments[1] {
         case "NO_ITEMS_IN_STOCK":
@@ -40,4 +46,56 @@ extension Item {
         Item(name: "VeniVidiVici"),
     ]
     static var singleTestItem = Item(name: "Foo")
+}
+
+
+
+class ItemRepository {
+    init() {}
+    
+    
+    
+//    func fetchFilms(completionHandler: @escaping ([Film]) -> Void) {
+//      // Setup the variable lotsOfFilms
+//      var lotsOfFilms: [Film]
+//
+//      // Call the API with some code
+//
+//      // Using data from the API, assign a value to lotsOfFilms
+//
+//      // Give the completion handler the variable, lotsOfFilms
+//      completionHandler(lotsOfFilms)
+//    }
+
+    public func getItems(completionHandler: @escaping ([Item]) -> Void) -> [Item] {
+        var itemList: [Item]
+        
+        let url = URL(string: "https://floating-spire-59497.herokuapp.com/api/v1//items")
+        guard let requestUrl = url else { fatalError() }
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "GET"
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                return
+            }
+            
+            if let data = data {
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]]
+                
+                if let json = json {
+                    print("JSON", json)
+                    itemList = json.map{
+                        Item(json: $0)
+                    }
+                    print("ITEMLISTINSIDE", itemList)
+                }
+            }
+        }
+        completionHandler(itemList)
+        task.resume()
+        print("ITEMLISTOUTSIDE", itemList)
+        return itemList
+    }
 }
