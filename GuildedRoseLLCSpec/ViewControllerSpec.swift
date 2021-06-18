@@ -22,7 +22,7 @@ class ViewControllerSpec: QuickSpec {
                     
                     controller.viewDidLoad()
                     
-                    expect(controller.itemCollectionView.dataSource).notTo(beNil())
+                    expect(controller.itemCollectionView.dataSource).toNotEventually(beNil())
                 }
             }
         }
