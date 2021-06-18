@@ -1,4 +1,4 @@
-struct Item {
+public struct Item {
     
     public init(name: String) {
         self.name = name
@@ -30,7 +30,7 @@ extension Item:Equatable{
     }
 }
 
-extension Item {
+public extension Item {
     static var testData = [
         Item(name: "Foo"),
         Item(name: "Bar"),
