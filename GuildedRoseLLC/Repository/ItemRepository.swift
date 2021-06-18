@@ -1,6 +1,10 @@
 import Foundation
 
-class ItemRepository {
+protocol Repository {
+    func getItems(onSuccess: @escaping (_ : [Item]) -> Void)
+}
+
+class ItemRepository: Repository {
 
     public func getItems(onSuccess: @escaping (_ : [Item]) -> Void) {
         var itemList: [Item]

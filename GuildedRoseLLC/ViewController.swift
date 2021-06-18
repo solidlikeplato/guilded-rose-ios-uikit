@@ -26,7 +26,7 @@ public class GreetingViewController: UIViewController, UICollectionViewDelegate 
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        ItemRepository().getItems() { (items: [Item]) in
+        MockItemRepository().getItems() { (items: [Item]) in
             self.datasource = ItemCollectionViewDataSource(items: items)
             self.data = items
             DispatchQueue.main.async {
