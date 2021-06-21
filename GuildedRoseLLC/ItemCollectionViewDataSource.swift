@@ -2,9 +2,9 @@ import UIKit
 
 public class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
-    var items: [Item]
-    
-    public init(items: [Item]) {
+    var items: [Item] = []
+
+    public func show(items: [Item]) {
         self.items = items
     }
     

@@ -8,10 +8,10 @@ class ViewControllerSpec: QuickSpec {
     override func spec() {
         
         describe("Loading the view") {
-            var controller: GuildedRoseLLC.GreetingViewController!
+            var controller: GuildedRoseLLC.ItemsViewController!
             
             beforeEach {
-                controller = GuildedRoseLLC.GreetingViewController()
+                controller = GuildedRoseLLC.ItemsViewController()
                 let itemCollectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: UICollectionViewLayout())
                 controller.itemCollectionView = itemCollectionView
                 controller.greeting = UILabel()
