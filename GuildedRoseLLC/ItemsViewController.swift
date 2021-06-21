@@ -10,12 +10,18 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         
     override public func viewDidLoad() {
         super.viewDidLoad()
-        let items = Item.getItems()
-        configureDataSource(items: items)
-        toggleListDisplay(items: items)
+        dataSource = ItemCollectionViewDataSource()
+        configureDataSource(items: [])
         
         greeting.accessibilityIdentifier = "Greeting"
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"
+    }
+    
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let items = Item.getItems()
+        configureDataSource(items: items)
+        toggleListDisplay(items: items)
     }
     
     private func toggleListDisplay(items: [Item]) {
@@ -29,7 +35,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func configureDataSource(items: [Item]) {
-        dataSource = ItemCollectionViewDataSource()
         dataSource?.show(items: items)
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
