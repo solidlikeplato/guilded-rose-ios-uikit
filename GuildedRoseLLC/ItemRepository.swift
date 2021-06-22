@@ -1,21 +1,24 @@
 import UIKit
 
 public class ItemRepository {
+    
     public init() {}
-    public static func getItems() -> [Item] {
-
-        guard CommandLine.arguments.count > 1 else {
-            return Item.testData
-        }
-        switch CommandLine.arguments[1] {
+    
+    public static func getItems(onSuccess: @escaping (_:[Item]) -> Void){
+        var items: [Item] = []
+        
+        let args: String = CommandLine.arguments.count > 1 ? CommandLine.arguments[1] : ""
+        
+        switch args {
         case "NO_ITEMS_IN_STOCK":
-            return []
+            items = []
         case "SINGLE_TEST_ITEM":
-            return [Item.singleTestItem]
+            items = [Item.singleTestItem]
         case "THREE_TEST_ITEMS":
-            return [Item.singleTestItem, Item.singleTestItem, Item.singleTestItem,]
+            items = [Item.singleTestItem, Item.singleTestItem, Item.singleTestItem,]
         default:
-            return Item.testData
+            items = Item.testData
         }
+        onSuccess(items)
     }
 }

@@ -3,11 +3,17 @@ import Nimble
 import GuildedRoseLLC
 
 class ItemRepositorySpec : QuickSpec {
+    
     override func spec() {
         
         describe("getItems"){
-            it("returns a static list of items") {
-                expect(ItemRepository.getItems()).to(equal(Item.testData))
+            it("sets a list of items") {
+                var data: [Item] = []
+                ItemRepository.getItems() {(items: [Item]) in
+                    data = items
+                }
+                
+                expect(data).to(equal(Item.testData))
             }
         }
     }
