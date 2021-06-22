@@ -16,7 +16,7 @@
 		AA8A894C265D778D0005C3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894A265D778D0005C3BC /* Main.storyboard */; };
 		AA8A894E265D778F0005C3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894D265D778F0005C3BC /* Assets.xcassets */; };
 		AA8A8951265D778F0005C3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */; };
-		AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */; };
+		AA8A895C265D77900005C3BC /* ItemViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */; };
 		AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C68265E940B00FC71E0 /* Quick */; };
 		AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C6E265E943A00FC71E0 /* Nimble */; };
 		AA9F1C71265E944300FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C70265E944300FC71E0 /* Quick */; };
@@ -65,7 +65,7 @@
 		AA8A8950265D778F0005C3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8A8952265D778F0005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
+		AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewControllerSpec.swift; sourceTree = "<group>"; };
 		AA8A895D265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUISpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8968265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */ = {
 			isa = PBXGroup;
 			children = (
-				AA8A895B265D77900005C3BC /* ViewControllerSpec.swift */,
+				AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */,
 				AA8A895D265D77900005C3BC /* Info.plist */,
 				AA547F69266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift */,
 			);
@@ -388,7 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8A895C265D77900005C3BC /* ViewControllerSpec.swift in Sources */,
+				AA8A895C265D77900005C3BC /* ItemViewControllerSpec.swift in Sources */,
 				AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
