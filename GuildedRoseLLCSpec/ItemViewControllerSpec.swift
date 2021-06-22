@@ -25,6 +25,12 @@ class ItemViewControllerSpec: QuickSpec {
                     expect(controller.itemCollectionView.dataSource).notTo(beNil())
                 }
                 
+                it("creates a repository") {
+                    controller.viewDidLoad()
+                    
+                    expect(controller.itemRepository).notTo(beNil())
+                }
+                
                 it("sets the data source to an empty list") {
                     controller.viewDidLoad()
                     

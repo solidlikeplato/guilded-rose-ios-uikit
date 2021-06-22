@@ -1,6 +1,10 @@
 import UIKit
 
-public class ItemRepository {
+public protocol ItemRepository {
+    func getItems(onSuccess: @escaping (_:[Item]) -> Void)
+}
+
+public class StaticItemRepository : ItemRepository {
     
     public init() {}
     

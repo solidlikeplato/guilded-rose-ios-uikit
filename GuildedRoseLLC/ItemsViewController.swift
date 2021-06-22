@@ -7,20 +7,21 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet public var noItemsLabel: UILabel!
     
     var dataSource: ItemCollectionViewDataSource?
-        
+    public var itemRepository: ItemRepository?
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
         
         greeting.accessibilityIdentifier = "Greeting"
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"
+        itemRepository = StaticItemRepository()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var items: [Item] = []
-        let itemRepository = ItemRepository()
-        itemRepository.getItems() {(data: [Item]) in
+        itemRepository?.getItems() {(data: [Item]) in
             items = data
         }
         configureDataSource(items: items)
