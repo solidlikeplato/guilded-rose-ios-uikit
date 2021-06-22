@@ -19,7 +19,8 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         var items: [Item] = []
-        ItemRepository.getItems() {(data: [Item]) in
+        let itemRepository = ItemRepository()
+        itemRepository.getItems() {(data: [Item]) in
             items = data
         }
         configureDataSource(items: items)

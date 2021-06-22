@@ -4,7 +4,7 @@ public class ItemRepository {
     
     public init() {}
     
-    public static func getItems(onSuccess: @escaping (_:[Item]) -> Void){
+    public func getItems(onSuccess: @escaping (_:[Item]) -> Void){
         var items: [Item] = []
         
         let args: String = CommandLine.arguments.count > 1 ? CommandLine.arguments[1] : ""

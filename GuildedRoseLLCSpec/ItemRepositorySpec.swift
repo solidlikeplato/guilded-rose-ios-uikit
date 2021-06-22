@@ -9,7 +9,8 @@ class ItemRepositorySpec : QuickSpec {
         describe("getItems"){
             it("sets a list of items") {
                 var data: [Item] = []
-                ItemRepository.getItems() {(items: [Item]) in
+                let itemRepository = ItemRepository()
+                itemRepository.getItems() {(items: [Item]) in
                     data = items
                 }
                 
