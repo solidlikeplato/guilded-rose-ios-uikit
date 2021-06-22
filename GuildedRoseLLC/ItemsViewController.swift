@@ -10,8 +10,7 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         
     override public func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = ItemCollectionViewDataSource()
-        configureDataSource(items: [])
+        configureDataSource()
         
         greeting.accessibilityIdentifier = "Greeting"
         itemCollectionView.accessibilityIdentifier = "itemCollectionView"
@@ -34,9 +33,11 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    private func configureDataSource(items: [Item]) {
-        dataSource?.show(items: items)
+    private func configureDataSource(items: [Item] = []) {
+        dataSource = ItemCollectionViewDataSource()
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
+        
+        dataSource?.show(items: items)
     }
 }
