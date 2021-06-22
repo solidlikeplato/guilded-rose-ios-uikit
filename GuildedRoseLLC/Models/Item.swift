@@ -3,25 +3,7 @@ public struct Item {
     public init(name: String) {
         self.name = name
     }
-    
     public let name: String
-    
-    public static func getItems() -> [Item] {
-
-        guard CommandLine.arguments.count > 1 else {
-            return testData
-        }
-        switch CommandLine.arguments[1] {
-        case "NO_ITEMS_IN_STOCK":
-            return []
-        case "SINGLE_TEST_ITEM":
-            return [singleTestItem]
-        case "THREE_TEST_ITEMS":
-            return [singleTestItem, singleTestItem, singleTestItem,]
-        default:
-            return testData
-        }
-    }
 }
 
 extension Item:Equatable{
