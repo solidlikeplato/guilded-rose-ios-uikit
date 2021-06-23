@@ -144,17 +144,12 @@
 		AA8A8943265D778D0005C3BC /* GuildedRoseLLC */ = {
 			isa = PBXGroup;
 			children = (
-				AA9F1CC0266185BB00FC71E0 /* Models */,
-				AA8A8946265D778D0005C3BC /* SceneDelegate.swift */,
-				AA8A8944265D778D0005C3BC /* AppDelegate.swift */,
-				AA8A8948265D778D0005C3BC /* ItemsViewController.swift */,
-				AA8A894A265D778D0005C3BC /* Main.storyboard */,
+				AABFE13C268373D100B6344C /* Items */,
+				AABFE13D268373F600B6344C /* Supporting Files */,
+				AA8A8952265D778F0005C3BC /* Info.plist */,
 				AA8A894D265D778F0005C3BC /* Assets.xcassets */,
 				AA8A894F265D778F0005C3BC /* LaunchScreen.storyboard */,
-				AA8A8952265D778F0005C3BC /* Info.plist */,
-				05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */,
-				05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */,
-				05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */,
+				AA8A894A265D778D0005C3BC /* Main.storyboard */,
 			);
 			path = GuildedRoseLLC;
 			sourceTree = "<group>";
@@ -186,14 +181,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AA9F1CC0266185BB00FC71E0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AAD1ADF826618FB70035EB67 /* Item.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		AA9F1CC62661861D00FC71E0 /* ModelsSpec */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +188,27 @@
 				AA9F1CC92661861D00FC71E0 /* Info.plist */,
 			);
 			path = ModelsSpec;
+			sourceTree = "<group>";
+		};
+		AABFE13C268373D100B6344C /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				AAD1ADF826618FB70035EB67 /* Item.swift */,
+				05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */,
+				05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */,
+				05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */,
+				AA8A8948265D778D0005C3BC /* ItemsViewController.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		AABFE13D268373F600B6344C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA8A8944265D778D0005C3BC /* AppDelegate.swift */,
+				AA8A8946265D778D0005C3BC /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
