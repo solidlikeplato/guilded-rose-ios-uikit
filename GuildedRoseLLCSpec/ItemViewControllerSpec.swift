@@ -53,7 +53,7 @@ class ItemViewControllerSpec: QuickSpec {
 
                     let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
                     
-                    expect(dataSource?.items).to(equal(Item.testData))
+                    expect(dataSource?.items).toEventually(equal(Item.testData))
                 }
                 
                 it("hides the item collection view when there are no items") {
@@ -65,11 +65,11 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
                     
-                    expect(controller.itemCollectionView.isHidden).to(beTrue())
+                    expect(controller.itemCollectionView.isHidden).toEventually(beTrue())
                     expect(controller.noItemsLabel.isHidden).to(beFalse())
                 }
                 
-                it("hides the item collection view when there are no items") {
+                it("shows the item collection view when there is an item") {
                     
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [Item(name: "FooBar")])
@@ -79,7 +79,7 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewWillAppear(true)
                     
                     expect(controller.itemCollectionView.isHidden).to(beFalse())
-                    expect(controller.noItemsLabel.isHidden).to(beTrue())
+                    expect(controller.noItemsLabel.isHidden).toEventually(beTrue())
                 }
             }
         }

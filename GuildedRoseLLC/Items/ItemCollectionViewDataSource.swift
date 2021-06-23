@@ -6,6 +6,7 @@ public class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource 
 
     public func show(items: [Item]) {
         self.items = items
+        print(items)
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
