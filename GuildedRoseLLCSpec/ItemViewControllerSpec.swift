@@ -20,43 +20,40 @@ class ItemViewControllerSpec: QuickSpec {
             
             describe("viewDidLoad") {
                 it("creates a data source") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemCollectionView.dataSource).notTo(beNil())
                 }
                 
                 it("creates a repository") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemRepository).notTo(beNil())
                 }
                 
                 it("sets the data source to an empty list") {
+                    
                     controller.viewDidLoad()
                     
-                    let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
-                    
-                    expect(dataSource?.items).to(equal([]))
+                    expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).to(equal([]))
                 }
             }
             
             describe("viewWillAppear") {
                 it("sets the data source to a static item list") {
-                    
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: Item.testData)
                     controller.itemRepository = itemRepository
                     
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
-
-                    let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
                     
-                    expect(dataSource?.items).to(equal(Item.testData))
+                    expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).toEventually(equal(Item.testData))
                 }
                 
                 it("hides the item collection view when there are no items") {
-                    
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [])
                     controller.itemRepository = itemRepository
@@ -64,11 +61,10 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
                     
-                    expect(controller.itemCollectionView.isHidden).to(beTrue())
+                    expect(controller.itemCollectionView.isHidden).toEventually(beTrue())
                 }
                 
                 it("shows the 'no items message' when there are no items") {
-                    
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [])
                     controller.itemRepository = itemRepository
@@ -76,11 +72,10 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
                     
-                    expect(controller.noItemsLabel.isHidden).to(beFalse())
+                    expect(controller.noItemsLabel.isHidden).toEventually(beFalse())
                 }
                 
-                it("shows the item collection view when there are items") {
-                    
+                it("shows the item collection view when there is an item") {
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [Item(name: "FooBar")])
                     controller.itemRepository = itemRepository
@@ -92,7 +87,6 @@ class ItemViewControllerSpec: QuickSpec {
                 }
                 
                 it("does not show the 'no items message' when there are items") {
-                    
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [Item(name: "FooBar")])
                     controller.itemRepository = itemRepository
@@ -100,7 +94,7 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
                     
-                    expect(controller.noItemsLabel.isHidden).to(beTrue())
+                    expect(controller.noItemsLabel.isHidden).toEventually(beTrue())
                 }
             }
         }

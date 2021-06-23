@@ -5,6 +5,7 @@ import Nimble
 class FakeItemRepositorySpec: QuickSpec {
     
     override func spec() {
+        
         describe("Getting the items") {
             it("calls the callback") {
                 var wasCallbackCalled = false

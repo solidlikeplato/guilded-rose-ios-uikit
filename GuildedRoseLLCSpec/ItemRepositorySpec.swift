@@ -10,6 +10,7 @@ class ItemRepositorySpec : QuickSpec {
             it("sets a list of items") {
                 var data: [Item] = []
                 let itemRepository = StaticItemRepository()
+                
                 itemRepository.getItems() {(items: [Item]) in
                     data = items
                 }

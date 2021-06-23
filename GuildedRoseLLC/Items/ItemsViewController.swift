@@ -6,8 +6,8 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet public var itemCollectionView: UICollectionView!
     @IBOutlet public var noItemsLabel: UILabel!
     
-    var dataSource: ItemCollectionViewDataSource?
-    public var itemRepository: ItemRepository = StaticItemRepository()
+    public var dataSource: ItemCollectionViewDataSource?
+    public var itemRepository: ItemRepository = RemoteItemRepository()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,12 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         var items: [Item] = []
         itemRepository.getItems() {(data: [Item]) in
             items = data
+            DispatchQueue.main.async {
+                self.configureDataSource(items: items)
+                self.toggleListDisplay(items: items)
+            }
         }
-        configureDataSource(items: items)
-        toggleListDisplay(items: items)
+
     }
     
     private func toggleListDisplay(items: [Item]) {
@@ -39,9 +42,10 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     
     private func configureDataSource(items: [Item] = []) {
         dataSource = ItemCollectionViewDataSource()
+        dataSource?.show(items: items)
+        
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
         
-        dataSource?.show(items: items)
     }
 }
