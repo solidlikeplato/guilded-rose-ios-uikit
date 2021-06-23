@@ -16,6 +16,7 @@ class ItemViewControllerSpec: QuickSpec {
                 controller.itemCollectionView = itemCollectionView
                 controller.greeting = UILabel()
                 controller.noItemsLabel = UILabel()
+                controller.itemRepository = FakeItemRepository()
             }
             
             describe("viewDidLoad") {
