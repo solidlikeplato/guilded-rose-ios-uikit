@@ -23,11 +23,8 @@
 		AA8A895C265D77900005C3BC /* ItemViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */; };
 		AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C68265E940B00FC71E0 /* Quick */; };
 		AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C6E265E943A00FC71E0 /* Nimble */; };
-		AA9F1C71265E944300FC71E0 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C70265E944300FC71E0 /* Quick */; };
-		AA9F1C73265E944700FC71E0 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AA9F1C72265E944700FC71E0 /* Nimble */; };
 		AA9F1CC82661861D00FC71E0 /* ModelsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */; };
 		AABFE13F2683758600B6344C /* StaticItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABFE13E2683758600B6344C /* StaticItemRepository.swift */; };
-		AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */; };
 		AAD1ADF526618F350035EB67 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = AAD1ADF426618F350035EB67 /* Quick */; };
 		AAD1ADF726618F390035EB67 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = AAD1ADF626618F390035EB67 /* Nimble */; };
 		AAD1ADF926618FB70035EB67 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD1ADF826618FB70035EB67 /* Item.swift */; };
@@ -35,13 +32,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		AA8A8958265D77900005C3BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AA8A8939265D778D0005C3BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AA8A8940265D778D0005C3BC;
-			remoteInfo = GuildedRoseLLC;
-		};
-		AA8A8963265D77900005C3BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AA8A8939265D778D0005C3BC /* Project object */;
 			proxyType = 1;
@@ -76,13 +66,10 @@
 		AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewControllerSpec.swift; sourceTree = "<group>"; };
 		AA8A895D265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuildedRoseLLCUISpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA8A8968265D77900005C3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelsSpec.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9F1CC72661861D00FC71E0 /* ModelsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsSpec.swift; sourceTree = "<group>"; };
 		AA9F1CC92661861D00FC71E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AABFE13E2683758600B6344C /* StaticItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticItemRepository.swift; sourceTree = "<group>"; };
-		AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuildedRoseLLCUISpec.swift; sourceTree = "<group>"; };
 		AAD1ADF826618FB70035EB67 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,15 +87,6 @@
 			files = (
 				AA9F1C69265E940B00FC71E0 /* Quick in Frameworks */,
 				AA9F1C6F265E943A00FC71E0 /* Nimble in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA8A895F265D77900005C3BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA9F1C71265E944300FC71E0 /* Quick in Frameworks */,
-				AA9F1C73265E944700FC71E0 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +116,6 @@
 			children = (
 				AA8A8943265D778D0005C3BC /* GuildedRoseLLC */,
 				AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */,
-				AA8A8965265D77900005C3BC /* GuildedRoseLLCUISpec */,
 				AA9F1CC62661861D00FC71E0 /* ModelsSpec */,
 				AA8A8942265D778D0005C3BC /* Products */,
 				AA9F1C6D265E943A00FC71E0 /* Frameworks */,
@@ -150,7 +127,6 @@
 			children = (
 				AA8A8941265D778D0005C3BC /* GuildedRoseLLC.app */,
 				AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */,
-				AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */,
 				AA9F1CC52661861D00FC71E0 /* ModelsSpec.xctest */,
 			);
 			name = Products;
@@ -179,15 +155,6 @@
 				05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */,
 			);
 			path = GuildedRoseLLCSpec;
-			sourceTree = "<group>";
-		};
-		AA8A8965265D77900005C3BC /* GuildedRoseLLCUISpec */ = {
-			isa = PBXGroup;
-			children = (
-				AAD1ADE9266189870035EB67 /* GuildedRoseLLCUISpec.swift */,
-				AA8A8968265D77900005C3BC /* Info.plist */,
-			);
-			path = GuildedRoseLLCUISpec;
 			sourceTree = "<group>";
 		};
 		AA9F1C6D265E943A00FC71E0 /* Frameworks */ = {
@@ -272,28 +239,6 @@
 			productReference = AA8A8957265D77900005C3BC /* GuildedRoseLLCSpec.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AA8A8961265D77900005C3BC /* GuildedRoseLLCUISpec */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUISpec" */;
-			buildPhases = (
-				AA8A895E265D77900005C3BC /* Sources */,
-				AA8A895F265D77900005C3BC /* Frameworks */,
-				AA8A8960265D77900005C3BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AA8A8964265D77900005C3BC /* PBXTargetDependency */,
-			);
-			name = GuildedRoseLLCUISpec;
-			packageProductDependencies = (
-				AA9F1C70265E944300FC71E0 /* Quick */,
-				AA9F1C72265E944700FC71E0 /* Nimble */,
-			);
-			productName = GuildedRoseLLCUISpec;
-			productReference = AA8A8962265D77900005C3BC /* GuildedRoseLLCUISpec.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		AA9F1CC42661861D00FC71E0 /* ModelsSpec */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA9F1CCC2661861D00FC71E0 /* Build configuration list for PBXNativeTarget "ModelsSpec" */;
@@ -332,10 +277,6 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = AA8A8940265D778D0005C3BC;
 					};
-					AA8A8961265D77900005C3BC = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = AA8A8940265D778D0005C3BC;
-					};
 					AA9F1CC42661861D00FC71E0 = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = AA8A8940265D778D0005C3BC;
@@ -361,7 +302,6 @@
 			targets = (
 				AA8A8940265D778D0005C3BC /* GuildedRoseLLC */,
 				AA8A8956265D77900005C3BC /* GuildedRoseLLCSpec */,
-				AA8A8961265D77900005C3BC /* GuildedRoseLLCUISpec */,
 				AA9F1CC42661861D00FC71E0 /* ModelsSpec */,
 			);
 		};
@@ -379,13 +319,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AA8A8955265D77900005C3BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AA8A8960265D77900005C3BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,14 +362,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA8A895E265D77900005C3BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAD1ADEA266189870035EB67 /* GuildedRoseLLCUISpec.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AA9F1CC12661861D00FC71E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,11 +377,6 @@
 			isa = PBXTargetDependency;
 			target = AA8A8940265D778D0005C3BC /* GuildedRoseLLC */;
 			targetProxy = AA8A8958265D77900005C3BC /* PBXContainerItemProxy */;
-		};
-		AA8A8964265D77900005C3BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AA8A8940265D778D0005C3BC /* GuildedRoseLLC */;
-			targetProxy = AA8A8963265D77900005C3BC /* PBXContainerItemProxy */;
 		};
 		AA9F1CCB2661861D00FC71E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -679,44 +599,6 @@
 			};
 			name = Release;
 		};
-		AA8A8972265D77900005C3BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCUISpec/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUISpec;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GuildedRoseLLC;
-			};
-			name = Debug;
-		};
-		AA8A8973265D77900005C3BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = GuildedRoseLLCUISpec/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ethan.GuildedRoseLLCUISpec;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GuildedRoseLLC;
-			};
-			name = Release;
-		};
 		AA9F1CCD2661861D00FC71E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -785,15 +667,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA8A8971265D77900005C3BC /* Build configuration list for PBXNativeTarget "GuildedRoseLLCUISpec" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA8A8972265D77900005C3BC /* Debug */,
-				AA8A8973265D77900005C3BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AA9F1CCC2661861D00FC71E0 /* Build configuration list for PBXNativeTarget "ModelsSpec" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -831,16 +704,6 @@
 			productName = Quick;
 		};
 		AA9F1C6E265E943A00FC71E0 /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9F1C6A265E941F00FC71E0 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
-		AA9F1C70265E944300FC71E0 /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9F1C67265E940B00FC71E0 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		AA9F1C72265E944700FC71E0 /* Nimble */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA9F1C6A265E941F00FC71E0 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
