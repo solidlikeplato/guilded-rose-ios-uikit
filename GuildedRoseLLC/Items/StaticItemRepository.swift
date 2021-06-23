@@ -1,6 +1,5 @@
-import UIKit
 
-public class ItemRepository {
+public class StaticItemRepository : ItemRepository {
     
     public init() {}
     
