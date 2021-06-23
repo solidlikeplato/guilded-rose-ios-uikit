@@ -42,7 +42,7 @@ class ItemViewControllerSpec: QuickSpec {
             }
             
             describe("viewWillAppear") {
-                it("sets the data source using the repository") {
+                it("sets the data source to a static item list") {
                     
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: Item.testData)
@@ -54,6 +54,32 @@ class ItemViewControllerSpec: QuickSpec {
                     let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
                     
                     expect(dataSource?.items).to(equal(Item.testData))
+                }
+                
+                it("hides the item collection view when there are no items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.itemCollectionView.isHidden).to(beTrue())
+                    expect(controller.noItemsLabel.isHidden).to(beFalse())
+                }
+                
+                it("hides the item collection view when there are no items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.itemCollectionView.isHidden).to(beFalse())
+                    expect(controller.noItemsLabel.isHidden).to(beTrue())
                 }
             }
         }
