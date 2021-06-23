@@ -16,7 +16,6 @@ class ItemViewControllerSpec: QuickSpec {
                 controller.itemCollectionView = itemCollectionView
                 controller.greeting = UILabel()
                 controller.noItemsLabel = UILabel()
-                controller.itemRepository = FakeItemRepository()
             }
             
             describe("viewDidLoad") {
@@ -66,10 +65,21 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewWillAppear(true)
                     
                     expect(controller.itemCollectionView.isHidden).to(beTrue())
+                }
+                
+                it("shows the 'no items message' when there are no items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
                     expect(controller.noItemsLabel.isHidden).to(beFalse())
                 }
                 
-                it("hides the item collection view when there are no items") {
+                it("shows the item collection view when there are items") {
                     
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: [Item(name: "FooBar")])
@@ -79,6 +89,17 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewWillAppear(true)
                     
                     expect(controller.itemCollectionView.isHidden).to(beFalse())
+                }
+                
+                it("does not show the 'no items message' when there are items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
                     expect(controller.noItemsLabel.isHidden).to(beTrue())
                 }
             }
