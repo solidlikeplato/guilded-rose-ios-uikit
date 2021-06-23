@@ -42,12 +42,65 @@ class ItemViewControllerSpec: QuickSpec {
             
             describe("viewWillAppear") {
                 it("sets the data source to a static item list") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: Item.testData)
+                    controller.itemRepository = itemRepository
+                    
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
-                    
+
                     let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
                     
                     expect(dataSource?.items).to(equal(Item.testData))
+                }
+                
+                it("hides the item collection view when there are no items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.itemCollectionView.isHidden).to(beTrue())
+                }
+                
+                it("shows the 'no items message' when there are no items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.noItemsLabel.isHidden).to(beFalse())
+                }
+                
+                it("shows the item collection view when there are items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.itemCollectionView.isHidden).to(beFalse())
+                }
+                
+                it("does not show the 'no items message' when there are items") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    controller.itemRepository = itemRepository
+                    
+                    controller.viewDidLoad()
+                    controller.viewWillAppear(true)
+                    
+                    expect(controller.noItemsLabel.isHidden).to(beTrue())
                 }
             }
         }
