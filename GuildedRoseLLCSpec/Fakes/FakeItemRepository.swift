@@ -1,14 +1,16 @@
 import GuildedRoseLLC
 
-class FakeItemRepository: ItemRepository {
-   
+public class FakeItemRepository: ItemRepository {
+
+    public init() {}
+    
     var itemsList: [Item] = []
     
-    func getItems(onSuccess: @escaping ([Item]) -> Void) {
+    public func getItems(onSuccess: @escaping ([Item]) -> Void) {
         onSuccess(itemsList)
     }
     
-    func stub(items: [Item]) {
+    public func stub(items: [Item]) {
       itemsList = items
     }
 }

@@ -44,28 +44,15 @@ class GuildedRoseLLCSpec: QuickSpec {
                 }
             }
             
-            context("With one item"){
-                it("displays the single item and doesn't display no items message") {
+            context("With items in stock"){
+                it("displays the items view and doesn't display no items message") {
                     app = XCUIApplication()
-                    launchWithCommandArgument(argument: "SINGLE_TEST_ITEM", app: app)
+                    app.launch()
                     let view = app.collectionViews["itemCollectionView"]
-                    let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
                     let noItemsMessage = app.staticTexts["noItemsMessage"]
                     
                     expect(view.isHittable).to(equal(true))
                     expect(noItemsMessage.isHittable).to(equal(false))
-                    expect(cells.count).to(equal(1))
-                }
-            }
-            
-            context("With three items"){
-                it("displays the three items") {
-                    app = XCUIApplication()
-                    launchWithCommandArgument(argument: "THREE_TEST_ITEMS", app: app)
-                    let view = app.collectionViews["itemCollectionView"]
-                    let cells = view.descendants(matching: XCUIElement.ElementType.staticText).allElementsBoundByIndex
-                    
-                    expect(cells.count).to(equal(3))
                 }
             }
         }

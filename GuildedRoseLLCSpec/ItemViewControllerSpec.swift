@@ -42,10 +42,15 @@ class ItemViewControllerSpec: QuickSpec {
             }
             
             describe("viewWillAppear") {
-                it("sets the data source to a static item list") {
+                it("sets the data source using the repository") {
+                    
+                    let itemRepository = FakeItemRepository()
+                    itemRepository.stub(items: Item.testData)
+                    controller.itemRepository = itemRepository
+                    
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
-                    
+
                     let dataSource = controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource
                     
                     expect(dataSource?.items).to(equal(Item.testData))
