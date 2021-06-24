@@ -7,7 +7,7 @@ public class RemoteItemRepository: ItemRepository {
     public func getItems(onSuccess: @escaping ([Item]) -> Void) {
         var itemList: [Item] = []
         
-        let url = URL(string: "https://safe-wave-09726.herokuapp.com/api/v1/items")
+        let url = URL(string: "https://floating-spire-59497.herokuapp.com/api/v1/items")
         guard let requestURL = url else { fatalError("The internet is broken")}
         
         let request = URLRequest(url: requestURL)
