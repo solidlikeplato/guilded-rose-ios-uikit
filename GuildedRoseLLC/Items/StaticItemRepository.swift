@@ -1,4 +1,3 @@
-
 public class StaticItemRepository : ItemRepository {
     
     public init() {}
