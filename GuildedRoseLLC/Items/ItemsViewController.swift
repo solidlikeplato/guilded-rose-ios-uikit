@@ -8,6 +8,7 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     
     public var dataSource: ItemCollectionViewDataSource?
     public var itemRepository: ItemRepository = RemoteItemRepository()
+    
 
     override public func viewDidLoad() {
         super.viewDidLoad()
