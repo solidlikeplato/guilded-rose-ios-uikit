@@ -16,15 +16,3 @@ extension Item:Equatable{
         return lhs.name == rhs.name
     }
 }
-
-public extension Item {
-    static var testData = [
-        Item(name: "Foo"),
-        Item(name: "Bar"),
-        Item(name: "FooBar"),
-        Item(name: "Lorem"),
-        Item(name: "Ipsum"),
-        Item(name: "VeniVidiVici"),
-    ]
-    static var singleTestItem = Item(name: "Foo")
-}

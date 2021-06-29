@@ -36,21 +36,29 @@ class ItemViewControllerSpec: QuickSpec {
                 it("sets the data source to an empty list") {
                     
                     controller.viewDidLoad()
-                    
+                    // Discuss this with @eric re: should we have declaration of dataSource inside the expect or not? 
                     expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).to(equal([]))
                 }
             }
             
             describe("viewWillAppear") {
                 it("sets the data source to a static item list") {
+                    let expectedTestData = [
+                        Item(name: "Foo"),
+                        Item(name: "Bar"),
+                        Item(name: "FooBar"),
+                        Item(name: "Lorem"),
+                        Item(name: "Ipsum"),
+                        Item(name: "VeniVidiVici"),
+                    ]
                     let itemRepository = FakeItemRepository()
-                    itemRepository.stub(items: Item.testData)
+                    itemRepository.stub(items: expectedTestData)
                     controller.itemRepository = itemRepository
                     
                     controller.viewDidLoad()
                     controller.viewWillAppear(true)
                     
-                    expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).toEventually(equal(Item.testData))
+                    expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).toEventually(equal(expectedTestData))
                 }
                 
                 it("hides the item collection view when there are no items") {

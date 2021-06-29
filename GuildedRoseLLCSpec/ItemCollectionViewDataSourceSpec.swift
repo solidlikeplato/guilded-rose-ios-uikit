@@ -14,10 +14,10 @@ class ItemCollectionViewDataSourceSpec: QuickSpec {
             return collectionView
         }
         
-        describe("the number of items") {
+        describe("building a datasource with a list of items") {
             it("has no items") {
                 let dataSource = ItemCollectionViewDataSource()
-                dataSource.show(items: [])
+                dataSource.show()
                 let collectionView = buildCollectionView()
                 let numberOfItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
                 
@@ -34,8 +34,16 @@ class ItemCollectionViewDataSourceSpec: QuickSpec {
             }
             
             it("has six items") {
+                let testData = [
+                    Item(name: "Foo"),
+                    Item(name: "Bar"),
+                    Item(name: "FooBar"),
+                    Item(name: "Lorem"),
+                    Item(name: "Ipsum"),
+                    Item(name: "VeniVidiVici"),
+                ]
                 let dataSource = ItemCollectionViewDataSource()
-                dataSource.show(items: Item.testData)
+                dataSource.show(items: testData)
                 let collectionView = buildCollectionView()
                 let numberOfItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
                 
