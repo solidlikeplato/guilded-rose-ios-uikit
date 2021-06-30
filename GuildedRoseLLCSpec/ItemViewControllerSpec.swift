@@ -36,7 +36,7 @@ class ItemViewControllerSpec: QuickSpec {
                 it("sets the data source to an empty list") {
                     
                     controller.viewDidLoad()
-                    // Discuss this with @eric re: should we have declaration of dataSource inside the expect or not? 
+                    // The datasource is created inside the expect block to mirror line 61 which has to be created inside expect for async behavior. 
                     expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).to(equal([]))
                 }
             }
