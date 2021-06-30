@@ -4,7 +4,7 @@ public class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource 
     
     public var items: [Item] = []
 
-    public func show(items: [Item]) {
+    public func show(items: [Item] = []) {
         self.items = items
     }
     
