@@ -15,7 +15,7 @@ class ItemCollectionViewDataSourceSpec: QuickSpec {
         }
         
         describe("building a datasource with a list of items") {
-            it("has no items") {
+            it("has no items by default") {
                 let dataSource = ItemCollectionViewDataSource()
                 dataSource.show()
                 let collectionView = buildCollectionView()
