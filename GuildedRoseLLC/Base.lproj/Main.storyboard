@@ -17,63 +17,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sa-E6E">
-                                <rect key="frame" x="0.0" y="94" width="414" height="77.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-sa-E6E">
+                                <rect key="frame" x="30" y="119" width="354" height="142.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Guilded Rose LLC!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-JN-H6b">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Guilded Rose LLC!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmN-JN-H6b">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Greeting"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items in stock:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Vs-BOE">
-                                        <rect key="frame" x="0.0" y="28.5" width="414" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items in stock:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAK-Vs-BOE">
+                                        <rect key="frame" x="0.0" y="66" width="354" height="24"/>
                                         <accessibility key="accessibilityConfiguration" identifier="StockAvailabilityHeading"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Items in stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-yF-JbC">
-                                        <rect key="frame" x="0.0" y="57" width="414" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sold out, please check back later." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOz-yF-JbC">
+                                        <rect key="frame" x="0.0" y="121" width="354" height="21.5"/>
                                         <accessibility key="accessibilityConfiguration" identifier="noItemsMessage"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fzc-Sc-AaE">
-                                <rect key="frame" x="20" y="180" width="374" height="682"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EIA-g4-jzH">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <rect key="frame" x="30" y="270" width="364" height="542"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="EIA-g4-jzH">
+                                    <size key="itemSize" width="330" height="64"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="1aq-tQ-eVo" customClass="ItemCollectionViewCell" customModule="GuildedRoseLLC" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="17" y="8" width="330" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Btb-qB-ZXS" customClass="ItemCollectionViewCell" customModule="GuildedRoseLLC" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSt-SO-6cq">
-                                                    <rect key="frame" x="43.5" y="54" width="41.5" height="20.5"/>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="30" y="5" width="270" height="51"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="centerY" secondItem="Btb-qB-ZXS" secondAttribute="centerY" id="CM3-qC-wfx"/>
-                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="centerX" secondItem="Btb-qB-ZXS" secondAttribute="centerX" id="fuO-jS-I8B"/>
+                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="centerX" secondItem="Btb-qB-ZXS" secondAttribute="centerX" id="Is1-0h-uMl"/>
+                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="leading" secondItem="Btb-qB-ZXS" secondAttribute="leading" constant="30" id="Q7G-ca-A3h"/>
+                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="centerY" secondItem="Btb-qB-ZXS" secondAttribute="centerY" constant="-1.5" id="UeZ-vt-6fA"/>
+                                                <constraint firstItem="JSt-SO-6cq" firstAttribute="top" secondItem="Btb-qB-ZXS" secondAttribute="top" constant="5" id="awI-iE-JHb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <size key="customSize" width="330" height="64"/>
                                         <connections>
                                             <outlet property="itemCell" destination="Btb-qB-ZXS" id="4Xb-KO-8JX"/>
                                             <outlet property="itemCellLabel" destination="JSt-SO-6cq" id="RhG-t1-f6d"/>
@@ -85,13 +93,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oak-F3-8gl"/>
-                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="top" secondItem="PSS-sa-E6E" secondAttribute="bottom" constant="8.5" id="XGD-yB-xkm"/>
-                            <constraint firstItem="PSS-sa-E6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yue-t0-pZs"/>
-                            <constraint firstItem="PSS-sa-E6E" firstAttribute="centerX" secondItem="Fzc-Sc-AaE" secondAttribute="centerX" id="ecb-u6-EtX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fzc-Sc-AaE" secondAttribute="trailing" constant="20" id="fbj-55-T2r"/>
-                            <constraint firstItem="PSS-sa-E6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sw7-Pu-8TD"/>
-                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wiP-ek-fGo"/>
+                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="leading" secondItem="PSS-sa-E6E" secondAttribute="leading" id="0O7-hu-jUh"/>
+                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="top" secondItem="PSS-sa-E6E" secondAttribute="bottom" constant="8.5" id="2Ik-0I-gna"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fzc-Sc-AaE" secondAttribute="bottom" constant="50" id="E6H-ea-Fzp"/>
+                            <constraint firstItem="Fzc-Sc-AaE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HFL-GI-lB9"/>
+                            <constraint firstItem="PSS-sa-E6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Hcz-ih-Mi8"/>
+                            <constraint firstItem="PSS-sa-E6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="SQq-oK-SKa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PSS-sa-E6E" secondAttribute="trailing" constant="30" id="Y4U-fq-1w5"/>
+                            <constraint firstItem="PSS-sa-E6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iAP-j4-oJv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -102,21 +111,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="75"/>
+            <point key="canvasLocation" x="31.199999999999999" y="74.212893553223395"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
