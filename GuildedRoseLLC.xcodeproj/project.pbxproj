@@ -13,6 +13,7 @@
 		05B4B6E12683783800D0EFA6 /* FakeItemRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6E02683783800D0EFA6 /* FakeItemRepositorySpec.swift */; };
 		05D62CC7266E9E4600675D09 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */; };
 		05D62CCC266E9FD000675D09 /* ItemCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */; };
+		05DEADDF268D133F0092B635 /* RemoteItemRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEADDE268D133F0092B635 /* RemoteItemRepositorySpec.swift */; };
 		AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA547F69266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift */; };
 		AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8944265D778D0005C3BC /* AppDelegate.swift */; };
 		AA8A8947265D778D0005C3BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8946265D778D0005C3BC /* SceneDelegate.swift */; };
@@ -55,6 +56,7 @@
 		05B4B6E02683783800D0EFA6 /* FakeItemRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeItemRepositorySpec.swift; sourceTree = "<group>"; };
 		05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		05DEADDE268D133F0092B635 /* RemoteItemRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteItemRepositorySpec.swift; sourceTree = "<group>"; };
 		AA547F69266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewDataSourceSpec.swift; sourceTree = "<group>"; };
 		AA8A8941265D778D0005C3BC /* GuildedRoseLLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuildedRoseLLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A8944265D778D0005C3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				AA8A895D265D77900005C3BC /* Info.plist */,
 				AA547F69266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift */,
 				05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */,
+				05DEADDE268D133F0092B635 /* RemoteItemRepositorySpec.swift */,
 			);
 			path = GuildedRoseLLCSpec;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				05B4B6DC2682748200D0EFA6 /* ItemRepositorySpec.swift in Sources */,
 				05B4B6E12683783800D0EFA6 /* FakeItemRepositorySpec.swift in Sources */,
 				AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */,
+				05DEADDF268D133F0092B635 /* RemoteItemRepositorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

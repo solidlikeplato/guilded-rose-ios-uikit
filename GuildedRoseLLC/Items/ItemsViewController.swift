@@ -19,9 +19,7 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var items: [Item] = []
-        itemRepository.getItems() {(data: [Item]) in
-            items = data
+        itemRepository.getItems() {(items: [Item]) in
             DispatchQueue.main.async {
                 self.configureDataSource(items: items)
                 self.toggleListDisplay(items: items)
