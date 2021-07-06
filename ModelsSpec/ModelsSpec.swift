@@ -1,6 +1,7 @@
 import Quick
 import Nimble
 import GuildedRoseLLC
+import UIKit
 
 class ItemSpec: QuickSpec {
     
@@ -14,9 +15,12 @@ class ItemSpec: QuickSpec {
             }
             
             it("sets the name from json") {
-                let brie = Item(json: ["id": 4, "name": "Aged Brie", "sellIn": 7, "quality": 5])
+                let decoder = JSONDecoder()
+            
+                let brieJson = try? JSONSerialization.data(withJSONObject: ["id": 4, "name": "Aged Brie", "sellIn": 7, "quality": 5])
+                let brie = try? decoder.decode(Item.self, from: brieJson!)
                 
-                expect(brie.name).to(equal("Aged Brie"))
+                expect(brie?.name).to(equal("Aged Brie"))
             }
         }
     }

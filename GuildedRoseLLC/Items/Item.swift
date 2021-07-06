@@ -1,13 +1,9 @@
-public struct Item {
+public struct Item: Codable {
     
     public init(name: String) {
         self.name = name
     }
-    
-    public init(json: [String: Any]) {
-        self.name = json["name"] as? String ?? "No name"
-    }
-    
+
     public let name: String
 }
 
