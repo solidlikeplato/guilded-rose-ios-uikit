@@ -14,21 +14,11 @@ public class RemoteItemRepository: ItemRepository {
                 return
             } else {
                 if let data = data {
-                    let itemList = self.parse(json: data)
+                    let itemList = ItemParser.parse(json: data)
                     onSuccess(itemList)
                 }
             }
         }
         task.resume()
-    }
-    
-    public func parse(json: Data) -> [Item] {
-        let decoder = JSONDecoder()
-        
-        if let jsonItems: [Item] = try? decoder.decode ([Item].self, from: json) {
-            let itemsList = jsonItems
-            return itemsList
-        }
-        return []
     }
 }
