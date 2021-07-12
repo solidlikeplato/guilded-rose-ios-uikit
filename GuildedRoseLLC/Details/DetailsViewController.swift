@@ -2,7 +2,6 @@ import UIKit
 
 public class DetailViewController: UIViewController {
   
-    
     @IBOutlet public var itemName: UILabel!
     public var setItem: (() -> Item)?
     public var item: Item?

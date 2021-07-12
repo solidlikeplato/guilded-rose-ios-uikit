@@ -25,7 +25,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
                 self.toggleListDisplay(items: items)
             }
         }
-
     }
     
     private func toggleListDisplay(items: [Item]) {
@@ -44,17 +43,18 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
-        
     }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is DetailViewController && sender is UIButton {
+        if segue.identifier == "DetailsPageSegue" {
             let destination = segue.destination as! DetailViewController
             let button = sender as! UIButton
             let item: Item = (self.dataSource?.items[button.tag])!
-            
             destination.setItem = {
-                () in return item
+                () in
+                print(item)
+                return item
+             
             }
         }
     }
