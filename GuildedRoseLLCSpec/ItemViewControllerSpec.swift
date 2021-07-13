@@ -7,7 +7,7 @@ class ItemViewControllerSpec: QuickSpec {
     
     override func spec() {
         
-        context("Loading the view") {
+        describe("Loading the view") {
             var controller: GuildedRoseLLC.ItemsViewController!
             
             beforeEach {
@@ -20,20 +20,23 @@ class ItemViewControllerSpec: QuickSpec {
             
             describe("viewDidLoad") {
                 it("creates a data source") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemCollectionView.dataSource).notTo(beNil())
                 }
                 
                 it("creates a repository") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemRepository).notTo(beNil())
                 }
                 
                 it("sets the data source to an empty list") {
+                    
                     controller.viewDidLoad()
-
+                    // The datasource is created inside the expect block to mirror line 61 which has to be created inside expect for async behavior. 
                     expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).to(equal([]))
                 }
             }
