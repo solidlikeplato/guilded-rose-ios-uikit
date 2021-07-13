@@ -16,7 +16,6 @@ public class ItemCollectionViewDataSource: NSObject, UICollectionViewDataSource 
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ItemCollectionViewCell
         cell.itemCellLabel.text = items[indexPath.row].name
-        cell.itemDetailButton.tag = indexPath.row
 
         return cell
     }
