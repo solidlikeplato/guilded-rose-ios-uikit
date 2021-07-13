@@ -106,45 +106,5 @@ class ItemViewControllerSpec: QuickSpec {
                 }
             }
         }
-        
-        context("transitioning to another view") {
-            var itemsController: GuildedRoseLLC.ItemsViewController!
-            var detailsController: GuildedRoseLLC.DetailViewController!
-            var button:UIButton!
-            let item = Item(name: "foo")
-            
-            beforeEach {
-                itemsController = ItemsViewController()
-                let dataSource = GuildedRoseLLC.ItemCollectionViewDataSource()
-                dataSource.show(items: [item])
-
-                itemsController.dataSource = dataSource
-         
-                detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                button = UIButton()
-                button.tag = 0
-            }
-            
-            describe("prepare for segue") {
-                it("sets the item when 'DetailsPageSegue' is called") {
-                    let segue = UIStoryboardSegue(identifier: ItemSegue.showDetails, source: itemsController, destination: detailsController)
-                    
-                    itemsController.prepare(for: segue, sender: button)
-                    detailsController.viewDidLoad()
-                  
-                    expect(detailsController.item).to(equal(item))
-                }
-                
-                it("doesn't set the item when 'ArbitrarySegue' is called") {
-                    let segue = UIStoryboardSegue(identifier: "ArbitrarySegue", source: itemsController, destination: detailsController)
-                    
-                    itemsController.prepare(for: segue, sender: button)
-                    detailsController.viewDidLoad()
-                  
-                    expect(detailsController.item).to(beNil())
-                }
-            }
-        }
     }
 }
