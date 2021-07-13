@@ -21,6 +21,8 @@ class ItemSpec: QuickSpec {
                 let brie = try? decoder.decode(Item.self, from: brieJson!)
                 
                 expect(brie?.name).to(equal("Aged Brie"))
+                expect(brie?.sellIn).to(equal(7))
+                expect(brie?.quality).to(equal(5))
             }
         }
     }

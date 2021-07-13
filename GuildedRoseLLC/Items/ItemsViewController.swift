@@ -50,7 +50,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
             destination.setItem = {
                 () in
                 return item
-             
             }
         }
     }

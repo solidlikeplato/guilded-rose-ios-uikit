@@ -119,6 +119,9 @@ class ItemViewControllerSpec: QuickSpec {
          
                 detailsController = DetailViewController()
                 detailsController.itemName = UILabel()
+                detailsController.quality = UILabel()
+                detailsController.sellIn = UILabel()
+                
                 button = UIButton()
                 button.tag = 0
             }
