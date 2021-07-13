@@ -12,9 +12,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     override public func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
-        
-        greeting.accessibilityIdentifier = "Greeting"
-        itemCollectionView.accessibilityIdentifier = "itemCollectionView"
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -25,7 +22,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
                 self.toggleListDisplay(items: items)
             }
         }
-
     }
     
     private func toggleListDisplay(items: [Item]) {
@@ -44,6 +40,18 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
-        
+    }
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ItemSegue.showDetails {
+            let destination = segue.destination as! DetailViewController
+            let button = sender as! UIButton
+            let item: Item = (self.dataSource?.items[button.tag])!
+            destination.setItem = {
+                () in
+                return item
+             
+            }
+        }
     }
 }
