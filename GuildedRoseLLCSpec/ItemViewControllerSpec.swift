@@ -7,7 +7,7 @@ class ItemViewControllerSpec: QuickSpec {
     
     override func spec() {
         
-        context("Loading the view") {
+        describe("Loading the view") {
             var controller: GuildedRoseLLC.ItemsViewController!
             
             beforeEach {
@@ -20,20 +20,23 @@ class ItemViewControllerSpec: QuickSpec {
             
             describe("viewDidLoad") {
                 it("creates a data source") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemCollectionView.dataSource).notTo(beNil())
                 }
                 
                 it("creates a repository") {
+                    
                     controller.viewDidLoad()
                     
                     expect(controller.itemRepository).notTo(beNil())
                 }
                 
                 it("sets the data source to an empty list") {
+                    
                     controller.viewDidLoad()
-
+                    // The datasource is created inside the expect block to mirror line 61 which has to be created inside expect for async behavior. 
                     expect((controller.itemCollectionView.dataSource as? ItemCollectionViewDataSource)?.items).to(equal([]))
                 }
             }
@@ -100,46 +103,6 @@ class ItemViewControllerSpec: QuickSpec {
                     controller.viewWillAppear(true)
                     
                     expect(controller.noItemsLabel.isHidden).toEventually(beTrue())
-                }
-            }
-        }
-        
-        context("transitioning to another view") {
-            var itemsController: GuildedRoseLLC.ItemsViewController!
-            var detailsController: GuildedRoseLLC.DetailViewController!
-            var button:UIButton!
-            let item = Item(name: "foo")
-            
-            beforeEach {
-                itemsController = ItemsViewController()
-                let dataSource = GuildedRoseLLC.ItemCollectionViewDataSource()
-                dataSource.show(items: [item])
-
-                itemsController.dataSource = dataSource
-         
-                detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                button = UIButton()
-                button.tag = 0
-            }
-            
-            describe("prepare for segue") {
-                it("sets the item when 'DetailsPageSegue' is called") {
-                    let segue = UIStoryboardSegue(identifier: ItemSegue.INDEXTODETAILSEGUEID, source: itemsController, destination: detailsController)
-                    
-                    itemsController.prepare(for: segue, sender: button)
-                    detailsController.viewDidLoad()
-                  
-                    expect(detailsController.item).to(equal(item))
-                }
-                
-                it("doesn't set the item when 'ArbitrarySegue' is called") {
-                    let segue = UIStoryboardSegue(identifier: "ArbitrarySegue", source: itemsController, destination: detailsController)
-                    
-                    itemsController.prepare(for: segue, sender: button)
-                    detailsController.viewDidLoad()
-                  
-                    expect(detailsController.item).to(beNil())
                 }
             }
         }
