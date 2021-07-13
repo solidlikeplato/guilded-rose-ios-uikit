@@ -25,7 +25,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
                 self.toggleListDisplay(items: items)
             }
         }
-
     }
     
     private func toggleListDisplay(items: [Item]) {
@@ -44,7 +43,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
         
         itemCollectionView.dataSource = dataSource
         itemCollectionView.delegate = self
-        
     }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
