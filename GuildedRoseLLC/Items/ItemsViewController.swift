@@ -12,9 +12,6 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     override public func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
-        
-        greeting.accessibilityIdentifier = "Greeting"
-        itemCollectionView.accessibilityIdentifier = "itemCollectionView"
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -46,13 +43,12 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     }
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailsPageSegue" {
+        if segue.identifier == StoryboardIDs.SEGUE__INDEX_TO_DETAIL {
             let destination = segue.destination as! DetailViewController
             let button = sender as! UIButton
             let item: Item = (self.dataSource?.items[button.tag])!
             destination.setItem = {
                 () in
-                print(item)
                 return item
              
             }
