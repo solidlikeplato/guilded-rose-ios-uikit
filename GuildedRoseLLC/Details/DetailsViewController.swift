@@ -11,6 +11,7 @@ public class DetailViewController: UIViewController {
         if let thisItem = setItem? () {
             self.item = thisItem
         }
+        
         itemName.text = item?.name
     }
 }

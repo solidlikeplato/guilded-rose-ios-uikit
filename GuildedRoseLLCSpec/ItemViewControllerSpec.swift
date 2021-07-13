@@ -125,7 +125,7 @@ class ItemViewControllerSpec: QuickSpec {
             
             describe("prepare for segue") {
                 it("sets the item when 'DetailsPageSegue' is called") {
-                    let segue = UIStoryboardSegue(identifier: "DetailsPageSegue", source: itemsController, destination: detailsController)
+                    let segue = UIStoryboardSegue(identifier: ItemSegue.INDEXTODETAILSEGUEID, source: itemsController, destination: detailsController)
                     
                     itemsController.prepare(for: segue, sender: button)
                     detailsController.viewDidLoad()
