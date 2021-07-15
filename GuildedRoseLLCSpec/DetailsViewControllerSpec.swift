@@ -8,10 +8,10 @@ class DetailsViewControllerSpec: QuickSpec {
         
         describe("View did load"){
             it("sets the item using the setItem closure"){
-                let detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                detailsController.quality = UILabel()
-                detailsController.sellIn = UILabel()
+                let detailsController = ItemDetailsViewController()
+                detailsController.nameLabel = UILabel()
+                detailsController.qualityLabel = UILabel()
+                detailsController.sellInLabel = UILabel()
                 
                 detailsController.setItem = {() in
                     return ItemTestData.build(name: "FooBar")
@@ -24,10 +24,10 @@ class DetailsViewControllerSpec: QuickSpec {
             }
             
             it("sets the Item's sellIn and Quality") {
-                let detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                detailsController.quality = UILabel()
-                detailsController.sellIn = UILabel()
+                let detailsController = ItemDetailsViewController()
+                detailsController.nameLabel = UILabel()
+                detailsController.qualityLabel = UILabel()
+                detailsController.sellInLabel = UILabel()
                 
                 detailsController.setItem = {() in
                     var item = ItemTestData.build(name: "FooBar")
@@ -45,13 +45,12 @@ class DetailsViewControllerSpec: QuickSpec {
             }
             
             it("sets the UI elements to match the item") {
-                let detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                detailsController.quality = UILabel()
-                detailsController.sellIn = UILabel()
+                let detailsController = ItemDetailsViewController()
+                detailsController.nameLabel = UILabel()
+                detailsController.qualityLabel = UILabel()
+                detailsController.sellInLabel = UILabel()
                 
-                detailsController.setItem = {
-                    () in
+                detailsController.setItem = {() in
                     var item = ItemTestData.build(name: "FooBar")
                     item.quality = 5
                     item.sellIn = 12
@@ -60,9 +59,9 @@ class DetailsViewControllerSpec: QuickSpec {
                 
                 detailsController.viewDidLoad()
                 
-                expect(detailsController.itemName.text).to(equal("FooBar"))
-                expect(detailsController.quality.text).to(equal("5"))
-                expect(detailsController.sellIn.text).to(equal("12"))
+                expect(detailsController.nameLabel.text).to(equal("FooBar"))
+                expect(detailsController.qualityLabel.text).to(equal("5"))
+                expect(detailsController.sellInLabel.text).to(equal("12"))
 
             }
         }

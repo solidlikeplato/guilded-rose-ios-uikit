@@ -1,10 +1,10 @@
 import UIKit
 
-public class DetailViewController: UIViewController {
+public class ItemDetailsViewController: UIViewController {
   
-    @IBOutlet public var quality: UILabel!
-    @IBOutlet public var sellIn: UILabel!
-    @IBOutlet public var itemName: UILabel!
+    @IBOutlet public var qualityLabel: UILabel!
+    @IBOutlet public var sellInLabel: UILabel!
+    @IBOutlet public var nameLabel: UILabel!
     public var setItem: (() -> Item)?
     public var item: Item?
     
@@ -15,9 +15,9 @@ public class DetailViewController: UIViewController {
         }
         
         if let item = item {
-            itemName.text = item.name
-            sellIn.text = String(item.sellIn)
-            quality.text = String(item.quality)
+            nameLabel.text = item.name
+            sellInLabel.text = String(item.sellIn)
+            qualityLabel.text = String(item.quality)
         }
     }
 }

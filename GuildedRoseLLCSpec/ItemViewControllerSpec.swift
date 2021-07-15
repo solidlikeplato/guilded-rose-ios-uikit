@@ -106,7 +106,7 @@ class ItemViewControllerSpec: QuickSpec {
         
         context("transitioning to another view") {
             var itemsController: GuildedRoseLLC.ItemsViewController!
-            var detailsController: GuildedRoseLLC.DetailViewController!
+            var detailsController: GuildedRoseLLC.ItemDetailsViewController!
             var button:UIButton!
             let item = ItemTestData.build(name: "foo")
             
@@ -117,10 +117,10 @@ class ItemViewControllerSpec: QuickSpec {
 
                 itemsController.dataSource = dataSource
          
-                detailsController = DetailViewController()
-                detailsController.itemName = UILabel()
-                detailsController.quality = UILabel()
-                detailsController.sellIn = UILabel()
+                detailsController = ItemDetailsViewController()
+                detailsController.nameLabel = UILabel()
+                detailsController.qualityLabel = UILabel()
+                detailsController.sellInLabel = UILabel()
                 
                 button = UIButton()
                 button.tag = 0

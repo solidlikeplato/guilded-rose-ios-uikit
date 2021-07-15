@@ -44,7 +44,7 @@ public class ItemsViewController: UIViewController, UICollectionViewDelegate {
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ItemSegue.showDetails {
-            let destination = segue.destination as! DetailViewController
+            let destination = segue.destination as! ItemDetailsViewController
             let button = sender as! UIButton
             let item: Item = (self.dataSource?.items[button.tag])!
             destination.setItem = {
