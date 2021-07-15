@@ -7,11 +7,10 @@ public struct Item: Codable {
     public var sellIn: Int
     public var quality: Int
     
-    
-    public init(name: String) {
+    public init(name: String, sellIn: Int, quality: Int) {
         self.name = name
-        self.sellIn = 0
-        self.quality = 0
+        self.sellIn = sellIn
+        self.quality = quality
     }
 }
 

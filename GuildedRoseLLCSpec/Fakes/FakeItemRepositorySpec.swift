@@ -2,6 +2,7 @@ import GuildedRoseLLC
 import Quick
 import Nimble
 
+
 class FakeItemRepositorySpec: QuickSpec {
     
     override func spec() {
@@ -20,7 +21,7 @@ class FakeItemRepositorySpec: QuickSpec {
             
             it("passes the subbed items to the callback") {
                 let itemRepository = FakeItemRepository()
-                let expectedItems = [Item(name: "FooBar")]
+                let expectedItems = [ItemTestData.build(name: "FooBar")]
                 itemRepository.stub(items: expectedItems)
                 var actualItems: [Item] = []
 

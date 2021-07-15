@@ -41,12 +41,12 @@ class ItemViewControllerSpec: QuickSpec {
             describe("viewWillAppear") {
                 it("sets the data source to a static item list") {
                     let expectedTestData = [
-                        Item(name: "Foo"),
-                        Item(name: "Bar"),
-                        Item(name: "FooBar"),
-                        Item(name: "Lorem"),
-                        Item(name: "Ipsum"),
-                        Item(name: "VeniVidiVici"),
+                        ItemTestData.build(name: "Foo"),
+                        ItemTestData.build(name: "Bar"),
+                        ItemTestData.build(name: "FooBar"),
+                        ItemTestData.build(name: "Lorem"),
+                        ItemTestData.build(name: "Ipsum"),
+                        ItemTestData.build(name: "VeniVidiVici"),
                     ]
                     let itemRepository = FakeItemRepository()
                     itemRepository.stub(items: expectedTestData)
@@ -82,7 +82,7 @@ class ItemViewControllerSpec: QuickSpec {
                 
                 it("shows the item collection view when there is an item") {
                     let itemRepository = FakeItemRepository()
-                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    itemRepository.stub(items: [ItemTestData.build(name: "FooBar")])
                     controller.itemRepository = itemRepository
                     
                     controller.viewDidLoad()
@@ -93,7 +93,7 @@ class ItemViewControllerSpec: QuickSpec {
                 
                 it("does not show the 'no items message' when there are items") {
                     let itemRepository = FakeItemRepository()
-                    itemRepository.stub(items: [Item(name: "FooBar")])
+                    itemRepository.stub(items: [ItemTestData.build(name: "FooBar")])
                     controller.itemRepository = itemRepository
                     
                     controller.viewDidLoad()
@@ -108,7 +108,7 @@ class ItemViewControllerSpec: QuickSpec {
             var itemsController: GuildedRoseLLC.ItemsViewController!
             var detailsController: GuildedRoseLLC.DetailViewController!
             var button:UIButton!
-            let item = Item(name: "foo")
+            let item = ItemTestData.build(name: "foo")
             
             beforeEach {
                 itemsController = ItemsViewController()

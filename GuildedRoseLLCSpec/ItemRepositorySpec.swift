@@ -9,12 +9,12 @@ class ItemRepositorySpec : QuickSpec {
         describe("getItems"){
             it("sets a list of items") {
                 let expectedTestData = [
-                    Item(name: "Foo"),
-                    Item(name: "Bar"),
-                    Item(name: "FooBar"),
-                    Item(name: "Lorem"),
-                    Item(name: "Ipsum"),
-                    Item(name: "VeniVidiVici"),
+                    Item(name: "Foo", sellIn: 5, quality: 7),
+                    Item(name: "Bar", sellIn: 5, quality: 7),
+                    Item(name: "FooBar", sellIn: 5, quality: 7),
+                    Item(name: "Lorem", sellIn: 5, quality: 7),
+                    Item(name: "Ipsum", sellIn: 5, quality: 7),
+                    Item(name: "VeniVidiVici", sellIn: 5, quality: 7)
                 ]
                 var data: [Item] = []
                 let itemRepository = StaticItemRepository()
