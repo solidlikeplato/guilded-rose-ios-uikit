@@ -14,17 +14,10 @@ public class DetailViewController: UIViewController {
             self.item = thisItem
         }
         
-        itemName.text = item?.name
-        sellIn.text = item?.sellIn ??? "None"
-        quality.text = item?.quality ??? "None"
-    }
-}
-
-infix operator ???: NilCoalescingPrecedence
-
-public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> String {
-    switch optional {
-    case let value?: return String(describing: value)
-    case nil: return defaultValue()
+        if let item = item {
+            itemName.text = item.name
+            sellIn.text = String(item.sellIn)
+            quality.text = String(item.quality)
+        }
     }
 }
