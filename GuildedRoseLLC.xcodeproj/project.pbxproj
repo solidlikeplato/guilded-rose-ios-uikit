@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05B2888B2695FFB7007B6727 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888A2695FFB7007B6727 /* DetailsViewController.swift */; };
 		05B2888D26960768007B6727 /* DetailsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888C26960768007B6727 /* DetailsViewControllerSpec.swift */; };
+		05B2889026A0C13B007B6727 /* ItemTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888F26A0C13B007B6727 /* ItemTestData.swift */; };
 		05B4B6DA268272C100D0EFA6 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */; };
 		05B4B6DC2682748200D0EFA6 /* ItemRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */; };
 		05B4B6DF2683782600D0EFA6 /* FakeItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6DE2683782600D0EFA6 /* FakeItemRepository.swift */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		05B2888A2695FFB7007B6727 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		05B2888C26960768007B6727 /* DetailsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerSpec.swift; sourceTree = "<group>"; };
+		05B2888F26A0C13B007B6727 /* ItemTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestData.swift; sourceTree = "<group>"; };
 		05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 		05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepositorySpec.swift; sourceTree = "<group>"; };
 		05B4B6DE2683782600D0EFA6 /* FakeItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeItemRepository.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		05B2888E26A0C129007B6727 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				05B2888F26A0C13B007B6727 /* ItemTestData.swift */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		05B4B6DD2683780C00D0EFA6 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */ = {
 			isa = PBXGroup;
 			children = (
+				05B2888E26A0C129007B6727 /* TestData */,
 				05B4B6DD2683780C00D0EFA6 /* Fakes */,
 				AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */,
 				AA8A895D265D77900005C3BC /* Info.plist */,
@@ -390,6 +401,7 @@
 				05B4B6E12683783800D0EFA6 /* FakeItemRepositorySpec.swift in Sources */,
 				AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */,
 				05DEADDF268D133F0092B635 /* ItemParserSpec.swift in Sources */,
+				05B2889026A0C13B007B6727 /* ItemTestData.swift in Sources */,
 				05B2888D26960768007B6727 /* DetailsViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
