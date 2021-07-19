@@ -5,6 +5,7 @@ public class ItemDetailsViewController: UIViewController {
     @IBOutlet public var qualityLabel: UILabel!
     @IBOutlet public var sellInLabel: UILabel!
     @IBOutlet public var nameLabel: UILabel!
+    
     public var setItem: (() -> Item)?
     public var item: Item?
     
