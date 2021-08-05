@@ -14,7 +14,7 @@ class DetailsViewControllerSpec: QuickSpec {
                 detailsController.sellInLabel = UILabel()
                 
                 detailsController.setItem = {() in
-                    return ItemTestData.build(name: "FooBar")
+                    return ItemBuilder.build(name: "FooBar")
                 }
                 
                 
@@ -30,7 +30,7 @@ class DetailsViewControllerSpec: QuickSpec {
                 detailsController.sellInLabel = UILabel()
                 
                 detailsController.setItem = {() in
-                    var item = ItemTestData.build(name: "FooBar")
+                    var item = ItemBuilder.build(name: "FooBar")
                     item.quality = 5
                     item.sellIn = 12
                     return item
@@ -51,7 +51,7 @@ class DetailsViewControllerSpec: QuickSpec {
                 detailsController.sellInLabel = UILabel()
                 
                 detailsController.setItem = {() in
-                    var item = ItemTestData.build(name: "FooBar")
+                    var item = ItemBuilder.build(name: "FooBar")
                     item.quality = 5
                     item.sellIn = 12
                     return item

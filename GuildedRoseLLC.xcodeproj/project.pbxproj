@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05B2888B2695FFB7007B6727 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888A2695FFB7007B6727 /* DetailsViewController.swift */; };
 		05B2888D26960768007B6727 /* DetailsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888C26960768007B6727 /* DetailsViewControllerSpec.swift */; };
-		05B2889026A0C13B007B6727 /* ItemTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888F26A0C13B007B6727 /* ItemTestData.swift */; };
 		05B4B6DA268272C100D0EFA6 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */; };
 		05B4B6DC2682748200D0EFA6 /* ItemRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */; };
 		05B4B6DF2683782600D0EFA6 /* FakeItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4B6DE2683782600D0EFA6 /* FakeItemRepository.swift */; };
@@ -19,6 +18,7 @@
 		05DEADDF268D133F0092B635 /* ItemParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DEADDE268D133F0092B635 /* ItemParserSpec.swift */; };
 		AA321FFC269DE5F300D25FF5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA321FFB269DE5F300D25FF5 /* Constants.swift */; };
 		AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA547F69266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift */; };
+		AA6406FD26BBBA1D006F363B /* ItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2888F26A0C13B007B6727 /* ItemBuilder.swift */; };
 		AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8944265D778D0005C3BC /* AppDelegate.swift */; };
 		AA8A8947265D778D0005C3BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8946265D778D0005C3BC /* SceneDelegate.swift */; };
 		AA8A8949265D778D0005C3BC /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A8948265D778D0005C3BC /* ItemsViewController.swift */; };
@@ -57,7 +57,7 @@
 /* Begin PBXFileReference section */
 		05B2888A2695FFB7007B6727 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		05B2888C26960768007B6727 /* DetailsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewControllerSpec.swift; sourceTree = "<group>"; };
-		05B2888F26A0C13B007B6727 /* ItemTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTestData.swift; sourceTree = "<group>"; };
+		05B2888F26A0C13B007B6727 /* ItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBuilder.swift; sourceTree = "<group>"; };
 		05B4B6D9268272C100D0EFA6 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
 		05B4B6DB2682748200D0EFA6 /* ItemRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepositorySpec.swift; sourceTree = "<group>"; };
 		05B4B6DE2683782600D0EFA6 /* FakeItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeItemRepository.swift; sourceTree = "<group>"; };
@@ -124,14 +124,6 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		05B2888E26A0C129007B6727 /* TestData */ = {
-			isa = PBXGroup;
-			children = (
-				05B2888F26A0C13B007B6727 /* ItemTestData.swift */,
-			);
-			path = TestData;
-			sourceTree = "<group>";
-		};
 		05B4B6DD2683780C00D0EFA6 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +172,6 @@
 		AA8A895A265D77900005C3BC /* GuildedRoseLLCSpec */ = {
 			isa = PBXGroup;
 			children = (
-				05B2888E26A0C129007B6727 /* TestData */,
 				05B4B6DD2683780C00D0EFA6 /* Fakes */,
 				AA8A895B265D77900005C3BC /* ItemViewControllerSpec.swift */,
 				AA8A895D265D77900005C3BC /* Info.plist */,
@@ -211,6 +202,7 @@
 		AABFE13C268373D100B6344C /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				05B2888F26A0C13B007B6727 /* ItemBuilder.swift */,
 				AAD1ADF826618FB70035EB67 /* Item.swift */,
 				05D62CC6266E9E4600675D09 /* ItemCollectionViewCell.swift */,
 				05D62CCB266E9FD000675D09 /* ItemCollectionViewDataSource.swift */,
@@ -382,6 +374,7 @@
 				05B2888B2695FFB7007B6727 /* DetailsViewController.swift in Sources */,
 				AAD1ADF926618FB70035EB67 /* Item.swift in Sources */,
 				AA8A8949265D778D0005C3BC /* ItemsViewController.swift in Sources */,
+				AA6406FD26BBBA1D006F363B /* ItemBuilder.swift in Sources */,
 				AACA59112694A6540057480C /* ItemParser.swift in Sources */,
 				AABFE13F2683758600B6344C /* StaticItemRepository.swift in Sources */,
 				AA8A8945265D778D0005C3BC /* AppDelegate.swift in Sources */,
@@ -401,7 +394,6 @@
 				05B4B6E12683783800D0EFA6 /* FakeItemRepositorySpec.swift in Sources */,
 				AA547F6A266FD5E600FE325F /* ItemCollectionViewDataSourceSpec.swift in Sources */,
 				05DEADDF268D133F0092B635 /* ItemParserSpec.swift in Sources */,
-				05B2889026A0C13B007B6727 /* ItemTestData.swift in Sources */,
 				05B2888D26960768007B6727 /* DetailsViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

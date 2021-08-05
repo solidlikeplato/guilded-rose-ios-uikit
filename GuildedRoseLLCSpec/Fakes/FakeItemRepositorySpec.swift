@@ -21,7 +21,7 @@ class FakeItemRepositorySpec: QuickSpec {
             
             it("passes the subbed items to the callback") {
                 let itemRepository = FakeItemRepository()
-                let expectedItems = [ItemTestData.build(name: "FooBar")]
+                let expectedItems = [ItemBuilder.build(name: "FooBar")]
                 itemRepository.stub(items: expectedItems)
                 var actualItems: [Item] = []
 
