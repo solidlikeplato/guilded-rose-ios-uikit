@@ -36,7 +36,7 @@ class ItemParserSpec : QuickSpec {
                     
                     let parsedData = ItemParser.parse(json: data)
 
-                    expect(parsedData).to(equal([Item(name: "Foo", sellIn: 67, quality: 89)]))
+                    expect(parsedData).to(equal([ItemBuilder.build(name: "Foo", sellIn: 67, quality: 89)]))
                 }
                 
                 it("parses a list of many named items into a list of items") {
@@ -60,7 +60,7 @@ class ItemParserSpec : QuickSpec {
                     
                     let parsedData = ItemParser.parse(json: data)
 
-                    expect(parsedData).to(equal([Item(name: "Foo", sellIn: 67, quality: 89), Item(name: "Bar", sellIn: 7, quality: 8)]))
+                    expect(parsedData).to(equal([ItemBuilder.build(name: "Foo", sellIn: 67, quality: 89), ItemBuilder.build(name: "Bar", sellIn: 7, quality: 8)]))
                 }
                 
             }

@@ -9,7 +9,7 @@ class ItemSpec: QuickSpec {
         
         describe("an Item") {
             it("sets the name, sellin, quality from a data") {
-                let brie = Item(name: "Brie", sellIn: 5, quality: 7)
+                let brie = ItemBuilder.build(name: "Brie", sellIn: 5, quality: 7)
                 
                 expect(brie.name).to(equal("Brie"))
                 expect(brie.sellIn).to(equal(5))
