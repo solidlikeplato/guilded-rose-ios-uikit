@@ -9,12 +9,41 @@ class ItemRepositorySpec : QuickSpec {
         describe("getItems"){
             it("sets a list of items") {
                 let expectedTestData = [
-                    ItemBuilder.build(name: "Foo", sellIn: 5, quality: 7),
-                    ItemBuilder.build(name: "Bar", sellIn: 5, quality: 7),
-                    ItemBuilder.build(name: "FooBar", sellIn: 5, quality: 7),
-                    ItemBuilder.build(name: "Lorem", sellIn: 5, quality: 7),
-                    ItemBuilder.build(name: "Ipsum", sellIn: 5, quality: 7),
-                    ItemBuilder.build(name: "VeniVidiVici", sellIn: 5, quality: 7)
+                    ItemBuilder()
+                        .set(name: "Foo")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
+                    
+                    ItemBuilder()
+                        .set(name: "Bar")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
+                    
+                    ItemBuilder()
+                        .set(name: "FooBar")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
+                    
+                    ItemBuilder()
+                        .set(name: "Lorem")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
+                    
+                    ItemBuilder()
+                        .set(name: "Ipsum")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
+                    
+                    ItemBuilder()
+                        .set(name: "VeniVidiVici")
+                        .set(sellIn: 5)
+                        .set(quality: 7)
+                        .build(),
                 ]
                 var data: [Item] = []
                 let itemRepository = StaticItemRepository()
